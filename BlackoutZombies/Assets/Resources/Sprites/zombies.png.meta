@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zombies_0
+      name: zombies_eyes
       rect:
         serializedVersion: 2
-        x: 7
-        y: 30
-        width: 64
-        height: 72
+        x: 39
+        y: 70
+        width: 4
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,6 +151,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: zombies_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 30
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90473fa0692fe2469208e8c1df76030
+      internalID: -1271855811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -162,8 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      zombies_0: 577543459
+      zombies_0: -1271855811
       zombies_1: -1473633633
+      zombies_eyes: 577543459
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

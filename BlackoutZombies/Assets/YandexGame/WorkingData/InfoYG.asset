@@ -18,7 +18,7 @@ MonoBehaviour:
   playerInfoSimulation:
     authorized: 1
     isMobile: 0
-    language: en
+    language: ru
     name: Player this
     uniqueID: 000
     photo: https://justplaygames.ru/public/icon_player.png
@@ -33,7 +33,7 @@ MonoBehaviour:
   saveCloud: 1
   flush: 0
   localSaveSync: 1
-  saveCloudInterval: 5
+  saveCloudInterval: 0
   saveOnQuitGame: 0
   quitGameParameters:
     objectName: YandexGame
@@ -217,8 +217,10 @@ MonoBehaviour:
     hi: 0
   fonts:
     defaultFont: []
-    ru: []
-    en: []
+    ru:
+    - {fileID: 12800000, guid: 37f6c3318dc1a6942aa4df00cf2a846a, type: 3}
+    en:
+    - {fileID: 12800000, guid: 37f6c3318dc1a6942aa4df00cf2a846a, type: 3}
     tr: []
     az: []
     be: []
@@ -291,7 +293,7 @@ MonoBehaviour:
     imageURI: https://justplaygames.ru/public/Paymant3.png
     priceValue: 30
     consumed: 1
-  metricaEnable: 0
+  metricaEnable: 1
   metricaCounterID: 0
   debug: 1
   archivingBuild: 1

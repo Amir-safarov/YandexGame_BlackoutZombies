@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class RoadPath : MonoBehaviour
 {
-    [SerializeField] private int Direction = 1;
     [SerializeField] private Transform[] dotsCollection;
 
     private int currentDotIndex = 0;

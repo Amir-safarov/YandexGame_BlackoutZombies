@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private const string Horizontal = "Horizontal";
     private const string Vertical = "Vertical";
 
-    private void Update()
+    public void Move()
     {
         _moveVector.x = Input.GetAxisRaw(Horizontal);
         _moveVector.y = Input.GetAxisRaw(Vertical);
@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(_mousePosition.y - transform.position.y, _mousePosition.x - transform.position.x) * Mathf.Rad2Deg;
 
         transform.localRotation = Quaternion.Euler(0, 0, angle);
-        transform.position +=(Vector3)_moveVector * _movementSpeed * Time.deltaTime;
+        transform.position += (Vector3)_moveVector * _movementSpeed * Time.deltaTime;
     }
-
 }

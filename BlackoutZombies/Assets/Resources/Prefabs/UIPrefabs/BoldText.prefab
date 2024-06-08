@@ -72,7 +72,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 118
+    m_MaxSize: 152
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 3734034826211512503}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -239,6 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 4135103656819445318}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 

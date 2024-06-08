@@ -16,19 +16,14 @@ public class PlayerShooting : MonoBehaviour
     
     private const int LMB = 0;
 
-    private void Update()
+    public void Shoot()
     {
-        if (Input.GetMouseButton(LMB) && _fireCooldown <=0)
+        if (Input.GetMouseButton(LMB) && _fireCooldown <= 0)
         {
-            Shoot();
+            Instantiate(_bullet, _firePoint.position, _firePoint.rotation);
             _fireCooldown = _fireRate;
         }
         else
             _fireCooldown -= Time.deltaTime;
-    }
-
-    private void Shoot()
-    {
-        Instantiate(_bullet, _firePoint.position, _firePoint.rotation);
     }
 }

@@ -4,8 +4,9 @@ using UnityEngine;
 public class BulletMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rb;
-    [SerializeField, Range(15f, 20)] private float _bulletSpeed;
-    [SerializeField, Range(2f, 10)] private float _bulletLifeTime;
+    [SerializeField, Range(1f, 20)] private float _bulletSpeed;
+
+    private float _bulletLifeTime = 1.5f;
 
     private void OnValidate()
     {

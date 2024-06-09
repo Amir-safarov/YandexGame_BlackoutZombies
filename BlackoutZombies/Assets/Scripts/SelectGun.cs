@@ -4,8 +4,11 @@ using UnityEngine.UI;
 
 public class SelectGun : MonoBehaviour
 {
-    [SerializeField] private List<Image> gunsList;
+    [SerializeField] private List<Image> gunImagesList;
+    [SerializeField] private List<GameObject> playerTypesList;
     [SerializeField] private GameRoot _gameRoot;
+    [SerializeField] private GameObject _spawnPoint;
+    [SerializeField] private UIVisibilityController _selectGunCanvasController;
 
     private int _selectedGunIndex = 0;
 
@@ -13,10 +16,10 @@ public class SelectGun : MonoBehaviour
     {
         get
         {
-            if (_selectedGunIndex > gunsList.Count - 1)
+            if (_selectedGunIndex > gunImagesList.Count - 1)
                 _selectedGunIndex = 0;
             if (_selectedGunIndex < 0)
-                _selectedGunIndex = gunsList.Count - 1;
+                _selectedGunIndex = gunImagesList.Count - 1;
             return _selectedGunIndex;
         }
         set { _selectedGunIndex = value; }
@@ -27,26 +30,29 @@ public class SelectGun : MonoBehaviour
         ShowSelectedGun();
     }
 
-
-    public void SelectNextRightGun()
+    public void SelectNextGun(bool _toRight)
     {
-        SelectedGunIndex++;
+        SelectedGunIndex += _toRight ? 1 : -1; 
         ShowSelectedGun();
     }
-    public void SelectNextLeftGun()
+
+    public void StartToPlay()
     {
-        SelectedGunIndex--;
-        ShowSelectedGun();
+        GameObject currentPlayerType = playerTypesList[SelectedGunIndex].gameObject;
+        Instantiate(currentPlayerType, _spawnPoint.transform);
+        _gameRoot.FindPlayerShootingObject();
+        _gameRoot.OpenPlayerControll();
+        _selectGunCanvasController.ObjectOff();
     }
 
     private void ShowSelectedGun()
     {
-        for (int i = 0; i < gunsList.Count; i++)
+        for (int i = 0; i < gunImagesList.Count; i++)
         {
             if (i == SelectedGunIndex)
-                gunsList[i].enabled = true;
+                gunImagesList[i].enabled = true;
             else
-                gunsList[i].enabled = false;
+                gunImagesList[i].enabled = false;
         }
     }
 }

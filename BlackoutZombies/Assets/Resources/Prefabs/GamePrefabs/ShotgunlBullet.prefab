@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4207451117216369986}
   - component: {fileID: 3518765954408562540}
   m_Layer: 0
-  m_Name: PistolBullet
+  m_Name: ShotgunlBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.07, y: -0.052, z: 0}
-  m_LocalScale: {x: 0.5103906, y: 0.43600765, z: 0.43600765}
+  m_LocalScale: {x: 1.17, y: 0.9994874, z: 0.9994874}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,8 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 3518765954408562540}
-  _bulletSpeed: 18.3
-  _bulletLifeTime: 5
+  _bulletSpeed: 20
 --- !u!212 &3902564607319514292
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90,8 +89,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -718150014, guid: 629965f0b6308b249a4cacf7212f8401, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 838732182, guid: 1e237b7042c3ab7438785beac1d9a84a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -134,8 +133,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.4, y: 0.31999996}
+  m_Offset: {x: 0.0008589427, y: -0.020674381}
+  m_Size: {x: 0.24, y: 0.0001}
   m_Direction: 0
 --- !u!50 &3518765954408562540
 Rigidbody2D:

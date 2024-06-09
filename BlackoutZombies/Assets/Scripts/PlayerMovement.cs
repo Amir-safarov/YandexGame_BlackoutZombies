@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IMovable
 {
     [SerializeField] private float _movementSpeed;
 
@@ -17,10 +17,10 @@ public class PlayerMovement : MonoBehaviour
         _moveVector.x = Input.GetAxisRaw(Horizontal);
         _moveVector.y = Input.GetAxisRaw(Vertical);
         _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        float angle = Mathf.Atan2(_mousePosition.y - transform.position.y, _mousePosition.x - transform.position.x) * Mathf.Rad2Deg;
+        Vector3 mouseDirection = (Vector3)_mousePosition - transform.position;
+        float angle = Mathf.Atan2(mouseDirection.y, mouseDirection.x) * Mathf.Rad2Deg;
 
         transform.localRotation = Quaternion.Euler(0, 0, angle);
-        transform.position += (Vector3)_moveVector * _movementSpeed * Time.deltaTime;
+        transform.position += (Vector3)_moveVector.normalized * _movementSpeed * Time.deltaTime;
     }
 }

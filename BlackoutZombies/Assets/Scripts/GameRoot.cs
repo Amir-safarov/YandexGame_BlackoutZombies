@@ -15,9 +15,9 @@ public class GameRoot : MonoBehaviour
 
     private void Update()
     {
-        if (!_canPlayerControll)
+/*        if (!_canPlayerControll)
             return;
-        _playerMove.Move();
+*/        _playerMove.Move();
         _playerShooting.Shoot();
     }
     public void FindPlayerShootingObject()

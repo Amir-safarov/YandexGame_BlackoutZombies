@@ -11,15 +11,19 @@ public class GameRoot : MonoBehaviour
     private bool _canPlayerControll;
     private const string PlayerTag = "Player";
 
-
+    private void Awake()
+    {
+        EventManager.PlayerDeathEvent.AddListener(ClosePlayerControll);
+    }
 
     private void Update()
     {
-/*        if (!_canPlayerControll)
+        if (!_canPlayerControll)
             return;
-*/        _playerMove.Move();
+        _playerMove.Move();
         _playerShooting.Shoot();
     }
+
     public void FindPlayerShootingObject()
     {
         if (_playerShooting == null)

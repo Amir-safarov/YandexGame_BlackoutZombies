@@ -4,7 +4,12 @@ public class ZombieMovement : MonoBehaviour, IMovable
 {
     [SerializeField] private Transform _playerePosition;
     [SerializeField] private float _movementSpeed;
-    private float _rotationSpeed = 0.05f;
+    private float _rotationSpeed = 0.1f;
+
+    private void OnEnable()
+    {
+        _movementSpeed = Random.Range(5.5f, 6.5f);
+    }
 
     public void Move()
     {

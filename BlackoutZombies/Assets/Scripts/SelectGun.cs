@@ -9,6 +9,7 @@ public class SelectGun : MonoBehaviour
     [SerializeField] private GameRoot _gameRoot;
     [SerializeField] private GameObject _spawnPoint;
     [SerializeField] private UIVisibilityController _selectGunCanvasController;
+    [SerializeField] private ZombiesSpawner _zombiesSpawner;
 
     private int _selectedGunIndex = 0;
 
@@ -43,6 +44,7 @@ public class SelectGun : MonoBehaviour
         _gameRoot.FindPlayerShootingObject();
         _gameRoot.OpenPlayerControll();
         _selectGunCanvasController.ObjectOff();
+        _zombiesSpawner.StartZombiesSpawn();
     }
 
     private void ShowSelectedGun()

@@ -8,7 +8,7 @@ public class ObjectHealth : MonoBehaviour
         {
             if (_health <= 0)
             {
-                Dead();
+                ObjectDeath();
                 _health = 0;
             }
             return _health;
@@ -21,28 +21,35 @@ public class ObjectHealth : MonoBehaviour
     [SerializeField] private SpriteRenderer _deafoultSprite;
     [SerializeField] private Sprite _deadSprite;
     [SerializeField] private GameObject _deadZombieObject;
+    [SerializeField] private GameRoot _gameRoot;
+    [SerializeField] private ZombiesSpawner _zombiesSpawner;
 
-    private void Update()
+    private const string ZombieTag = "Zombie";
+    private const int ZombiesDamage = 1;
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.I))
-            TakeDamage(1);
+        if (collision.CompareTag(ZombieTag))
+            TakeDamage(ZombiesDamage);
     }
 
     public void TakeDamage(int outDamage)
     {
         Health -= outDamage;
-        print($"{this.name} taked damage {outDamage}. Health {Health}");
+        print($"{name} taked damage {outDamage}. Health {Health}");
     }
 
-    private void Dead()
+    private void ObjectDeath()
     {
         if (_isPlayersHealth)
         {
+            EventManager.InvokePlayersDeath();
             _deafoultSprite.sprite = _deadSprite;
         }
         else
         {
-            Instantiate(_deadZombieObject,transform.position, transform.rotation);
+            Instantiate(_deadZombieObject, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

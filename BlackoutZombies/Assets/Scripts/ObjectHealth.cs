@@ -50,7 +50,7 @@ public class ObjectHealth : MonoBehaviour
         else
         {
             Instantiate(_deadZombieObject, transform.position, transform.rotation);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

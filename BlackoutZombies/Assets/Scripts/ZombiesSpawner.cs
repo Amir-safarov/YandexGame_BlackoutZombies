@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
+using System.Data;
 using UnityEngine;
-using UnityEngine.Accessibility;
 using Random = UnityEngine.Random;
 
 public class ZombiesSpawner : MonoBehaviour
 {
+    public int ZombieSpawnCounter
+    {
+        get
+        {
+            if (zombieSpawnCounter >= _zombiesList.Count)
+                zombieSpawnCounter = 0;
+            return zombieSpawnCounter;
+        }
+        set { zombieSpawnCounter = value; }
+    }
+
     [SerializeField] private GameObject _zombiePrefabType1;
     [SerializeField] private GameObject _zombiePrefabType2;
     [SerializeField] private Transform _zombiesOnScene;
     [SerializeField] private List<GameObject> _zombiesList;
     [SerializeField] private List<Transform> _spawnPointList;
     [SerializeField] private float _spawnInterval;
+
+    int zombieSpawnCounter = 0;
 
     private void Awake()
     {
@@ -36,24 +48,39 @@ public class ZombiesSpawner : MonoBehaviour
 
     public void StartZombiesSpawn() =>
         StartCoroutine(FirstWaveSpawn());
-    
+
     private IEnumerator FirstWaveSpawn()
     {
-        for (int i = 0; i < _zombiesList.Count; i++)
+        while (true)
         {
-            if (i < 2)
+            if (_zombiesList[ZombieSpawnCounter].activeSelf)
+                yield return null;
+            else
             {
-                SpawnZombies(_zombiesList[i]);
-                continue;
+                SpawnZombies(_zombiesList[ZombieSpawnCounter]);
+                ZombieSpawnCounter++;
+                print($"{ZombieSpawnCounter}");
+                yield return new WaitForSeconds(_spawnInterval);
             }
-            SpawnZombies(_zombiesList[i]);
-            yield return new WaitForSecondsRealtime(_spawnInterval);
         }
-        yield return null;
+        /*        for (int i = 0; i < _zombiesList.Count; i++)
+                {
+                    if (i < 2)
+                    {
+                        SpawnZombies(_zombiesList[i]);
+                        continue;
+                    }
+                    SpawnZombies(_zombiesList[i]);
+                    yield return new WaitForSecondsRealtime(_spawnInterval);
+                }
+                    yield return null;
+        */
     }
 
     private void SpawnZombies(GameObject _zombie)
     {
+        //if (_zombie.activeSelf)
+        //    return;
         int spawnPointIndex = Random.Range(0, _spawnPointList.Count);
         _zombie.transform.position = _spawnPointList[spawnPointIndex].position;
         _zombie.gameObject.SetActive(true);

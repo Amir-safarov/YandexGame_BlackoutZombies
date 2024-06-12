@@ -15835,6 +15835,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1245471497}
     - target: {fileID: 3626565762336181895, guid: da5100619e8f50f4aaad6682681df293, type: 3}
+      propertyPath: _zombiesList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626565762336181895, guid: da5100619e8f50f4aaad6682681df293, type: 3}
       propertyPath: _zombiesList.Array.data[20]
       value: 
       objectReference: {fileID: 0}

@@ -20,7 +20,6 @@ public class PlayerShooting : MonoBehaviour
     private void OnEnable()
     {
         _bulletsForThisGunTest = _bulletsCount;
-        print($"{_bulletsForThisGunTest}");
     }
 
     public void ReloadGun()

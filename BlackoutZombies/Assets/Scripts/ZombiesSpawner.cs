@@ -59,28 +59,13 @@ public class ZombiesSpawner : MonoBehaviour
             {
                 SpawnZombies(_zombiesList[ZombieSpawnCounter]);
                 ZombieSpawnCounter++;
-                print($"{ZombieSpawnCounter}");
                 yield return new WaitForSeconds(_spawnInterval);
             }
         }
-        /*        for (int i = 0; i < _zombiesList.Count; i++)
-                {
-                    if (i < 2)
-                    {
-                        SpawnZombies(_zombiesList[i]);
-                        continue;
-                    }
-                    SpawnZombies(_zombiesList[i]);
-                    yield return new WaitForSecondsRealtime(_spawnInterval);
-                }
-                    yield return null;
-        */
     }
 
     private void SpawnZombies(GameObject _zombie)
     {
-        //if (_zombie.activeSelf)
-        //    return;
         int spawnPointIndex = Random.Range(0, _spawnPointList.Count);
         _zombie.transform.position = _spawnPointList[spawnPointIndex].position;
         _zombie.gameObject.SetActive(true);

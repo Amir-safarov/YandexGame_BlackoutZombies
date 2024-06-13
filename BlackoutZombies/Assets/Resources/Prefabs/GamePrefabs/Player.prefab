@@ -80,10 +80,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d1884351be16947a4bee8b6a85aa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerCollider: {fileID: 3410884029384874994}
   _health: 3
   _isPlayersHealth: 1
   _deafoultSprite: {fileID: 3577894056529565031}
   _deadSprite: {fileID: 0}
+  _deadPlayer: {fileID: 5926977556210651156, guid: fc6661601a3754249a38be4ac3e0c401, type: 3}
   _deadZombieObject: {fileID: 0}
   _gameRoot: {fileID: 0}
   _zombiesSpawner: {fileID: 0}

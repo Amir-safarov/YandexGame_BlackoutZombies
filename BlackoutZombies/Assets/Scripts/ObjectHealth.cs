@@ -11,6 +11,8 @@ public class ObjectHealth : MonoBehaviour
                 ObjectDeath();
                 _health = 0;
             }
+            if (_health > MaxObjectHealth)
+                _health = MaxObjectHealth;
             return _health;
         }
         set { _health = value; }
@@ -26,12 +28,19 @@ public class ObjectHealth : MonoBehaviour
 
     private const string ZombieTag = "Zombie";
     private const int ZombiesDamage = 1;
-
+    private const int MaxObjectHealth = 3;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(ZombieTag))
             TakeDamage(ZombiesDamage);
+    }
+
+
+    public void HealthPointUpObject(int outHPUp)
+    {
+        Health += outHPUp;
+        print($"{name} health up {outHPUp}. Health {Health}");
     }
 
     public void TakeDamage(int outDamage)

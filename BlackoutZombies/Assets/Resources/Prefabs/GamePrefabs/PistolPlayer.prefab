@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.32
       objectReference: {fileID: 0}
+    - target: {fileID: 4291764631340828803, guid: fc9fdf82049691f43bddbda98ce7c3ab, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4330690689868025859, guid: fc9fdf82049691f43bddbda98ce7c3ab, type: 3}
       propertyPath: _fireRate
       value: 0.4

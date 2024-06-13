@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5393950913503980638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3679150975538834399}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3679150975538834399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5393950913503980638}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.943, y: -0.057, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2174455650310174366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6504157509426806147
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2174455650310174366}
   - component: {fileID: 3524168373192873214}
+  - component: {fileID: 5517500034194098453}
   - component: {fileID: 3410884029384874994}
   m_Layer: 0
   m_Name: Player
@@ -33,6 +65,7 @@ Transform:
   m_Children:
   - {fileID: 5873838593082785148}
   - {fileID: 6130304176252966595}
+  - {fileID: 3679150975538834399}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3524168373192873214
@@ -47,11 +80,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d1884351be16947a4bee8b6a85aa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 1
+  _health: 3
   _isPlayersHealth: 1
   _deafoultSprite: {fileID: 3577894056529565031}
   _deadSprite: {fileID: 0}
   _deadZombieObject: {fileID: 0}
+  _gameRoot: {fileID: 0}
+  _zombiesSpawner: {fileID: 0}
+--- !u!114 &5517500034194098453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6504157509426806147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fbdd0d17cd03d54f9ba39bd2e2ed151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerLightSource: {fileID: 5261414289735632218}
 --- !u!61 &3410884029384874994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -169,7 +217,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1738759640, guid: 4e118d412d4cbb54cb8cb0fec3ec36d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -207,7 +255,7 @@ Transform:
   m_GameObject: {fileID: 7642797337322061196}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 0.339, y: -0.030000007, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.37268978, y: 0.24410176, z: 2.2947352}
   m_ConstrainProportionsScale: 0
   m_Children: []

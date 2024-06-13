@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6773875658010558255
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2870048140103792814}
-  m_Layer: 0
-  m_Name: FirePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2870048140103792814
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6773875658010558255}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.943, y: -0.057, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 790304935550526959}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1502669292111270769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95,10 +64,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3524168373192873214, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
+      propertyPath: _deadSprite
+      value: 
+      objectReference: {fileID: -1415131640, guid: 1cec5d4b644491c44ac6d1711654cf81, type: 3}
     - target: {fileID: 3577894056529565031, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 64004916, guid: 84ae2778efcd0d443b4d682418a25f21, type: 3}
+    - target: {fileID: 5261414289735632218, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393950913503980638, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5873838593082785148, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.48
@@ -117,22 +98,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6504157509426806147, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
       propertyPath: m_Name
-      value: PlayerWithGun
+      value: GunPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2174455650310174366, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2870048140103792814}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6504157509426806147, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4330690689868025859}
   m_SourcePrefab: {fileID: 100100000, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
---- !u!4 &790304935550526959 stripped
+--- !u!4 &2870048140103792814 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2174455650310174366, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3679150975538834399, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
   m_PrefabInstance: {fileID: 1502669292111270769}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5663809833812160242 stripped

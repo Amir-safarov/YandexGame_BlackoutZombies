@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heart1_0
+      name: heart1
       rect:
         serializedVersion: 2
         x: 10
@@ -118,7 +118,7 @@ TextureImporter:
         width: 108
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      heart1_0: 898162532
+      heart1: 898162532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

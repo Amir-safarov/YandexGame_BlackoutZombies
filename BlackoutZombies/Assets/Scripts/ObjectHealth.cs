@@ -32,7 +32,10 @@ public class ObjectHealth : MonoBehaviour
     private const string ZombieTag = "Zombie";
     private const int ZombiesDamage = 1;
     private const int MaxObjectHealth = 3;
-    private const int InvulnerabilityTime = 3;
+    private const float InvulnerabilityTime = 1.5f;
+
+    private Color DeafaultPlayerSpriteColor = new Color(1f, 1f, 1f, 1f);
+    private Color PlayerInvulnerabilitySpriteColor = new Color(1f, 1f, 1f, 0.9f);
 
     private void OnValidate()
     {
@@ -45,6 +48,7 @@ public class ObjectHealth : MonoBehaviour
         if (collision.CompareTag(ZombieTag))
         {
             TakeDamage(ZombiesDamage);
+            EventManager.InvokeTransferHeart(Health);
             StartCoroutine(PlayerInvulnerability());
         }
     }
@@ -53,6 +57,7 @@ public class ObjectHealth : MonoBehaviour
     public void HealthPointUpObject(int outHPUp)
     {
         Health += outHPUp;
+        EventManager.InvokeTransferHeart(Health);
     }
 
     public void TakeDamage(int outDamage)
@@ -63,10 +68,10 @@ public class ObjectHealth : MonoBehaviour
 
     private IEnumerator PlayerInvulnerability()
     {
-        _deafoultSprite.color = new Color(1f, 1f, 1f, 0.9f);
+        _deafoultSprite.color = PlayerInvulnerabilitySpriteColor;
         _playerCollider.isTrigger = false;
         yield return new WaitForSeconds(InvulnerabilityTime);
-        _deafoultSprite.color = new Color(1f, 1f, 1f, 1f);
+        _deafoultSprite.color = DeafaultPlayerSpriteColor;
         _playerCollider.isTrigger = true;
     }
 
@@ -74,7 +79,7 @@ public class ObjectHealth : MonoBehaviour
     {
         if (_isPlayersHealth)
         {
-            _deafoultSprite.color = new Color(1f, 1f, 1f, 1f);
+            _deafoultSprite.color = DeafaultPlayerSpriteColor;
             _deafoultSprite.sprite = _deadSprite;
             EventManager.InvokePlayersDeath();
         }

@@ -20,11 +20,13 @@ public class PlayerShooting : MonoBehaviour
     private void OnEnable()
     {
         _bulletsForThisGunTest = _bulletsCount;
+        EventManager.InvokeTransferBullets(_bulletsCount);
     }
 
     public void ReloadGun()
     {
         _bulletsCount = _bulletsForThisGunTest;
+        EventManager.InvokeTransferBullets(_bulletsCount);
     }
 
     public void Shoot()
@@ -33,6 +35,7 @@ public class PlayerShooting : MonoBehaviour
         {
             ShootByType();
             _bulletsCount--;
+            EventManager.InvokeTransferBullets(_bulletsCount);
             _fireCooldown = _fireRate;
         }
         else

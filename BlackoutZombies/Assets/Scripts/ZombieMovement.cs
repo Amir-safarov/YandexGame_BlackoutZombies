@@ -5,10 +5,18 @@ public class ZombieMovement : MonoBehaviour, IMovable
     [SerializeField] private Transform _playerePosition;
     [SerializeField] private float _movementSpeed;
     private float _rotationSpeed = 0.1f;
+    private bool _canMove;
 
     private void OnEnable()
     {
         _movementSpeed = Random.Range(5.5f, 6.5f);
+    }
+
+    private void Update()
+    {
+        if (!_canMove)
+            return;
+        Move();
     }
 
     public void Move()
@@ -20,8 +28,9 @@ public class ZombieMovement : MonoBehaviour, IMovable
         transform.position = Vector3.MoveTowards(transform.position, _playerePosition.position, _movementSpeed * Time.deltaTime);
     }
 
-    private void Update()
-    {
-        Move();
-    }
+    public void OpenZombieMove()=>
+        _canMove = true;
+
+    public void CloseZombieMove()=>
+        _canMove = false;
 }

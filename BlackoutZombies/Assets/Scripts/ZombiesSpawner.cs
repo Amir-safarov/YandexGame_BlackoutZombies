@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,7 +19,7 @@ public class ZombiesSpawner : MonoBehaviour
     [SerializeField] private GameObject _zombiePrefabType1;
     [SerializeField] private GameObject _zombiePrefabType2;
     [SerializeField] private Transform _zombiesOnScene;
-    [SerializeField] private List<GameObject> _zombiesList;
+    [SerializeField] private List<ZombieMovement> _zombiesList;
     [SerializeField] private List<Transform> _spawnPointList;
     [SerializeField] private float _spawnInterval;
 
@@ -36,13 +35,13 @@ public class ZombiesSpawner : MonoBehaviour
         for (int i = 0; i < _spawnPointList.Count; i++)
             _spawnPointList[i] = transform.GetChild(i);
         for (int i = 0; i < _zombiesList.Count; i++)
-            _zombiesList[i] = _zombiesOnScene.GetChild(i).gameObject;
+            _zombiesList[i] = _zombiesOnScene.GetChild(i).GetComponent<ZombieMovement>();
     }
 
     public void DestroyZombiesList()
     {
         foreach (var zombie in _zombiesList)
-            zombie.SetActive(false);
+            zombie.CloseZombieMove();
         StopAllCoroutines();
     }
 
@@ -53,7 +52,7 @@ public class ZombiesSpawner : MonoBehaviour
     {
         while (true)
         {
-            if (_zombiesList[ZombieSpawnCounter].activeSelf)
+            if (_zombiesList[ZombieSpawnCounter].gameObject.activeSelf)
                 yield return null;
             else
             {
@@ -64,10 +63,11 @@ public class ZombiesSpawner : MonoBehaviour
         }
     }
 
-    private void SpawnZombies(GameObject _zombie)
+    private void SpawnZombies(ZombieMovement _zombie)
     {
         int spawnPointIndex = Random.Range(0, _spawnPointList.Count);
         _zombie.transform.position = _spawnPointList[spawnPointIndex].position;
+        _zombie.OpenZombieMove();
         _zombie.gameObject.SetActive(true);
     }
 }

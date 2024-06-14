@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.Collections;
 using UnityEngine;
 
 public class ObjectHealth : MonoBehaviour
@@ -54,7 +53,6 @@ public class ObjectHealth : MonoBehaviour
     public void HealthPointUpObject(int outHPUp)
     {
         Health += outHPUp;
-        print($"{name} health up {outHPUp}. Health {Health}");
     }
 
     public void TakeDamage(int outDamage)
@@ -65,8 +63,10 @@ public class ObjectHealth : MonoBehaviour
 
     private IEnumerator PlayerInvulnerability()
     {
+        _deafoultSprite.color = new Color(1f, 1f, 1f, 0.9f);
         _playerCollider.isTrigger = false;
         yield return new WaitForSeconds(InvulnerabilityTime);
+        _deafoultSprite.color = new Color(1f, 1f, 1f, 1f);
         _playerCollider.isTrigger = true;
     }
 
@@ -74,6 +74,7 @@ public class ObjectHealth : MonoBehaviour
     {
         if (_isPlayersHealth)
         {
+            _deafoultSprite.color = new Color(1f, 1f, 1f, 1f);
             _deafoultSprite.sprite = _deadSprite;
             EventManager.InvokePlayersDeath();
         }

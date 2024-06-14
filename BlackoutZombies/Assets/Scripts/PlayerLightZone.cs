@@ -7,8 +7,8 @@ public class PlayerLightZone : MonoBehaviour
     {
         get
         {
-            if (_currentLightRange >= MaxLightRange)
-                _currentLightRange = MaxLightRange;
+            if (_currentLightRange >= ExtraLightRange)
+                _currentLightRange = ExtraLightRange;
             if (_currentLightRange < MinLightRange)
                 _currentLightRange = MinLightRange;
             return _currentLightRange;
@@ -22,6 +22,7 @@ public class PlayerLightZone : MonoBehaviour
     private bool _isNeedToUpdateLight;
 
     private const float BatteryExtinctionStep = 0.005f;
+    private const float ExtraLightRange = 30;
     private const float MaxLightRange = 17;
     private const float OnStartLightRange = 11;
     private const float MinLightRange = 4;
@@ -31,6 +32,11 @@ public class PlayerLightZone : MonoBehaviour
         _isNeedToUpdateLight = true;
         CurrentLightRange = OnStartLightRange;
         _playerLightSource.range = CurrentLightRange;
+    }
+
+    private void Awake()
+    {
+        EventManager.PlayerDeathEvent.AddListener(LastLightBattery);
     }
 
     private void Update()
@@ -44,6 +50,12 @@ public class PlayerLightZone : MonoBehaviour
     {
         CurrentLightRange = MaxLightRange;
     }
+
+    private void LastLightBattery()
+    {
+        CurrentLightRange = ExtraLightRange;
+    }
+
 
     private void UpdateLightRange()
     {

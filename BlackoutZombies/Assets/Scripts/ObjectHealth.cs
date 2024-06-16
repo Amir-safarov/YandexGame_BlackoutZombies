@@ -26,8 +26,6 @@ public class ObjectHealth : MonoBehaviour
     [SerializeField] private Sprite _deadSprite;
     [SerializeField] private GameObject _deadPlayer;
     [SerializeField] private GameObject _deadZombieObject;
-    [SerializeField] private GameRoot _gameRoot;
-    [SerializeField] private ZombiesSpawner _zombiesSpawner;
 
     private const string ZombieTag = "Zombie";
     private const int ZombiesDamage = 1;

@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1473633633, guid: 3cac987f9768ec7418cb96554c5bd256, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -134,10 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d1884351be16947a4bee8b6a85aa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerCollider: {fileID: 7503974141671348003}
   _health: 1
   _isPlayersHealth: 0
   _deafoultSprite: {fileID: 0}
   _deadSprite: {fileID: 0}
+  _deadPlayer: {fileID: 0}
   _deadZombieObject: {fileID: 2605549905749111734, guid: 0feb79b14503e6c4187745782c771a1f, type: 3}
 --- !u!114 &6606118059787415280
 MonoBehaviour:

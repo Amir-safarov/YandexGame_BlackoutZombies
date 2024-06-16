@@ -22,7 +22,7 @@ public class PlayerLightZone : MonoBehaviour
     private bool _isNeedToUpdateLight;
 
     private const float BatteryExtinctionStep = 0.005f;
-    private const float ExtraLightRange = 30;
+    private const float ExtraLightRange = 50;
     private const float MaxLightRange = 17;
     private const float OnStartLightRange = 11;
     private const float MinLightRange = 4;
@@ -54,6 +54,7 @@ public class PlayerLightZone : MonoBehaviour
     private void LastLightBattery()
     {
         CurrentLightRange = ExtraLightRange;
+        _playerLightSource.intensity = 1.5f;
     }
 
     private void UpdateLightRange()

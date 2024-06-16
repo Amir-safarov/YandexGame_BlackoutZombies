@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIHeart : MonoBehaviour
 {
-    [SerializeField] private Canvas _parentCanvas;
+    [SerializeField] private UIVisibilityController _parentCanvas;
     [SerializeField] private List<GameObject> _heartsList;
 
     private void Awake()
@@ -28,5 +28,5 @@ public class UIHeart : MonoBehaviour
     }
 
     private void CloseParentCanvas() =>
-        _parentCanvas.enabled = false;
+        _parentCanvas.ObjectOff();
 }

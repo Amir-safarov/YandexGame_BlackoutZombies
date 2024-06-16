@@ -6,9 +6,11 @@ public class SelectGun : MonoBehaviour
 {
     [SerializeField] private List<Image> gunImagesList;
     [SerializeField] private List<GameObject> playerTypesList;
+    [Header("To Start References")]
     [SerializeField] private GameRoot _gameRoot;
     [SerializeField] private GameObject _spawnPoint;
     [SerializeField] private UIVisibilityController _selectGunCanvasController;
+    [SerializeField] private UIVisibilityController _gameCanvasController;
     [SerializeField] private ZombiesSpawner _zombiesSpawner;
     [SerializeField] private Image _currentGunImage;
 
@@ -40,14 +42,14 @@ public class SelectGun : MonoBehaviour
 
     public void StartToPlay()
     {
+        _selectGunCanvasController.ObjectOff();
+        _gameCanvasController.ObjectOn();
+        _currentGunImage.sprite = gunImagesList[SelectedGunIndex].sprite;
         GameObject currentPlayerType = playerTypesList[SelectedGunIndex].gameObject;
         Instantiate(currentPlayerType, _spawnPoint.transform);
         _gameRoot.FindPlayerShootingObject();
         _gameRoot.OpenPlayerControll();
-        _selectGunCanvasController.ObjectOff();
         _zombiesSpawner.StartZombiesSpawn();
-        _zombiesSpawner.StartZombiesSpawn();
-        _currentGunImage.sprite = gunImagesList[SelectedGunIndex].sprite;
     }
 
     private void ShowSelectedGun()

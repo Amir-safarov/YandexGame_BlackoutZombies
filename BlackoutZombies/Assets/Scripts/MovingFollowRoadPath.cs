@@ -1,13 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class MovingFollowRoadPath : MonoBehaviour
 {
     [SerializeField] private RoadPath _roadPath;
     [SerializeField, Range(0.1f,10)] private float _distanceOffset;
-
-    private float _movingSpeed = 5f;
+    [SerializeField] private float _movingSpeed = 5f;
     private IEnumerator<Transform> _dotInPath;
 
     private void Start()

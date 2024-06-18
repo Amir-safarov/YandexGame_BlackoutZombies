@@ -6,7 +6,7 @@ public class BulletMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField, Range(1f, 20)] private float _bulletSpeed;
 
-    private float _bulletLifeTime = 1.5f;
+    private const float _bulletLifeTime = 1.5f;
 
     private void OnValidate()
     {
@@ -23,6 +23,4 @@ public class BulletMovement : MonoBehaviour
     {
         _rb.velocity = transform.right * _bulletSpeed;
     }
-
-
 }

@@ -9,7 +9,7 @@ public class ZombieMovement : MonoBehaviour, IMovable
 
     private void OnEnable()
     {
-        _movementSpeed = Random.Range(5.5f, 6.5f);
+        _movementSpeed = Random.Range(5f, 6f);
     }
 
     private void Update()

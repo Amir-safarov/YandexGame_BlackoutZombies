@@ -23,27 +23,26 @@ public class PickUpObject : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            switch (_type)
-            {
+            switch (_type){
                 case PickUpObjectType.HealthKit:
                     collision.GetComponent<ObjectHealth>().HealthPointUpObject(HealthKitHPUp);
-                    print($"{_type} puck up");
                     break;
                 case PickUpObjectType.BulletsKit:
                     collision.GetComponent<PlayerShooting>().ReloadGun();
-                    print($"{_type} puck up");
                     break;
                 case PickUpObjectType.Battery:
                     collision.GetComponent<PlayerLightZone>().ReloadBattery();
-                    print($"{_type} puck up");
                     break;
             }
+            print($"{_type} puck up");
             RespawnObject();
         }
     }
 
     private void RespawnObject()
     {
-        transform.position = new Vector3 (Random.Range(_itemsSpawnArea.bounds.min.x, _itemsSpawnArea.bounds.max.x), Random.Range(_itemsSpawnArea.bounds.min.y, _itemsSpawnArea.bounds.max.y), 0);
+        transform.position =
+            new Vector3(Random.Range(_itemsSpawnArea.bounds.min.x, _itemsSpawnArea.bounds.max.x),
+            Random.Range(_itemsSpawnArea.bounds.min.y, _itemsSpawnArea.bounds.max.y), 0);
     }
 }

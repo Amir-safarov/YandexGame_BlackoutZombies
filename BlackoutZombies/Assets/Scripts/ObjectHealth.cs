@@ -28,12 +28,14 @@ public class ObjectHealth : MonoBehaviour
     [SerializeField] private GameObject _deadZombieObject;
 
     private const string ZombieTag = "Zombie";
+    private const string DamageObjectTag = "DamageObject";
     private const int ZombiesDamage = 1;
+    private const int DamageObjectDamage = 4;
     private const int MaxObjectHealth = 3;
     private const float InvulnerabilityTime = 1.5f;
 
-    private Color DeafaultPlayerSpriteColor = new Color(1f, 1f, 1f, 1f);
-    private Color PlayerInvulnerabilitySpriteColor = new Color(1f, 1f, 1f, 0.9f);
+    private readonly Color DeafaultPlayerSpriteColor = new Color(1f, 1f, 1f, 1f);
+    private readonly Color PlayerInvulnerabilitySpriteColor = new Color(1f, 1f, 1f, 0.9f);
 
     private void OnValidate()
     {
@@ -46,11 +48,12 @@ public class ObjectHealth : MonoBehaviour
         if (collision.CompareTag(ZombieTag))
         {
             TakeDamage(ZombiesDamage);
-            EventManager.InvokeTransferHeart(Health);
             StartCoroutine(PlayerInvulnerability());
         }
+        if (collision.CompareTag(DamageObjectTag))
+            TakeDamage(DamageObjectDamage);
+        EventManager.InvokeTransferHeart(Health);
     }
-
 
     public void HealthPointUpObject(int outHPUp)
     {

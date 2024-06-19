@@ -3,13 +3,18 @@ using UnityEngine;
 public class ZombieMovement : MonoBehaviour, IMovable
 {
     [SerializeField] private Transform _playerePosition;
-    [SerializeField] private float _movementSpeed;
-    private float _rotationSpeed = 0.1f;
+
+    private float _rotationSpeed = 0.25f;
+    private float _movementSpeed;
     private bool _canMove;
+
+    private const float _minMovementSpeed = 3f;
+    private const float _maxMovementSpeed = 4f;
+
 
     private void OnEnable()
     {
-        _movementSpeed = Random.Range(5f, 6f);
+        _movementSpeed = Random.Range(_minMovementSpeed, _maxMovementSpeed);
     }
 
     private void Update()
@@ -28,9 +33,9 @@ public class ZombieMovement : MonoBehaviour, IMovable
         transform.position = Vector3.MoveTowards(transform.position, _playerePosition.position, _movementSpeed * Time.deltaTime);
     }
 
-    public void OpenZombieMove()=>
+    public void OpenZombieMove() =>
         _canMove = true;
 
-    public void CloseZombieMove()=>
+    public void CloseZombieMove() =>
         _canMove = false;
 }

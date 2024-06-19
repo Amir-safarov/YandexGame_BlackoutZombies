@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8f83a6ff4a5e3428de4f413408fd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 7.5
+  _movementSpeed: 10
 --- !u!1 &2755793617204261980
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +456,7 @@ MonoBehaviour:
   - {fileID: 3459252443789152967}
   - {fileID: 2126259163885303404}
   - {fileID: 8647580398054021108}
-  _spawnInterval: 1
+  _spawnInterval: 2.5
 --- !u!1 &6984439480668948132
 GameObject:
   m_ObjectHideFlags: 0

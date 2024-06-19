@@ -403,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4135103656819445318, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_FontData.m_MaxSize
-      value: 118
+      value: 152
       objectReference: {fileID: 0}
     - target: {fileID: 4135103656819445318, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2688,6 +2688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roadPath: {fileID: 160614151}
   _distanceOffset: 0.1
+  _movingSpeed: 5
 --- !u!1 &1220364789
 GameObject:
   m_ObjectHideFlags: 0
@@ -5839,11 +5840,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4135103656819445318, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_FontData.m_MaxSize
-      value: 118
+      value: 152
       objectReference: {fileID: 0}
     - target: {fileID: 4135103656819445318, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 118
+      value: 152
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_Pivot.x
@@ -5990,6 +5991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3524168373192873214, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
+    - {fileID: 5517500034194098453, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

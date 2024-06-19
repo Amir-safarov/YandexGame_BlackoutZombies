@@ -49,10 +49,13 @@ public class ObjectHealth : MonoBehaviour
         {
             TakeDamage(ZombiesDamage);
             StartCoroutine(PlayerInvulnerability());
+            EventManager.InvokeTransferHeart(Health);
         }
-        if (collision.CompareTag(DamageObjectTag))
+        else if (collision.CompareTag(DamageObjectTag))
+        {
             TakeDamage(DamageObjectDamage);
-        EventManager.InvokeTransferHeart(Health);
+            EventManager.InvokeTransferHeart(Health);
+        }
     }
 
     public void HealthPointUpObject(int outHPUp)

@@ -28,6 +28,7 @@ public class ObjectHealth : MonoBehaviour
     [SerializeField] private GameObject _deadZombieObject;
 
     private const string ZombieTag = "Zombie";
+    private const string PlayerTag = "Player";
     private const string DamageObjectTag = "DamageObject";
     private const int ZombiesDamage = 1;
     private const int DamageObjectDamage = 4;
@@ -37,25 +38,23 @@ public class ObjectHealth : MonoBehaviour
     private readonly Color DeafaultPlayerSpriteColor = new Color(1f, 1f, 1f, 1f);
     private readonly Color PlayerInvulnerabilitySpriteColor = new Color(1f, 1f, 1f, 0.9f);
 
+    private string _currentObjectTag;
+
     private void OnValidate()
     {
         if (!_playerCollider)
             _playerCollider = GetComponent<BoxCollider2D>();
     }
 
+    private void OnEnable()
+    {
+        _currentObjectTag = gameObject.tag;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(ZombieTag))
-        {
-            TakeDamage(ZombiesDamage);
-            StartCoroutine(PlayerInvulnerability());
-            EventManager.InvokeTransferHeart(Health);
-        }
-        else if (collision.CompareTag(DamageObjectTag))
-        {
-            TakeDamage(DamageObjectDamage);
-            EventManager.InvokeTransferHeart(Health);
-        }
+        CheckZombiesHit(collision);
+        CheckDamageObjectHit(collision);
     }
 
     public void HealthPointUpObject(int outHPUp)
@@ -70,6 +69,24 @@ public class ObjectHealth : MonoBehaviour
         print($"{name} taked damage {outDamage}. Health {Health}");
     }
 
+    private void CheckDamageObjectHit(Collider2D collision)
+    {
+        if (collision.CompareTag(DamageObjectTag))
+        {
+            TakeDamage(DamageObjectDamage);
+            EventManager.InvokeTransferHeart(Health);
+        }
+    }
+
+    private void CheckZombiesHit(Collider2D collision)
+    {
+        if (_currentObjectTag == PlayerTag && collision.CompareTag(ZombieTag))
+        {
+            TakeDamage(ZombiesDamage);
+            StartCoroutine(PlayerInvulnerability());
+            EventManager.InvokeTransferHeart(Health);
+        }
+    }
     private IEnumerator PlayerInvulnerability()
     {
         _deafoultSprite.color = PlayerInvulnerabilitySpriteColor;

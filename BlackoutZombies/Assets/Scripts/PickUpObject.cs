@@ -34,7 +34,6 @@ public class PickUpObject : MonoBehaviour
                     collision.GetComponent<PlayerLightZone>().ReloadBattery();
                     break;
             }
-            print($"{_type} puck up");
             RespawnObject();
         }
     }

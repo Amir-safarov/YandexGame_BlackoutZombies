@@ -25,6 +25,7 @@ public class EventManager : MonoBehaviour
 
     public static void InvokeTransferZombieDeath() =>
       TransferZombieDeathEvent.Invoke();
+
     public static void InvokeRestartScene() =>
       RestartSceneEvent.Invoke();
 }

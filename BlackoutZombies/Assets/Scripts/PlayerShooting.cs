@@ -12,20 +12,26 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField, Range(0.1f, 2f)] private float _fireRate;
 
     private float _fireCooldown;
-    private int _bulletsForThisGunTest;
+    private int _bulletsForThisGun;
 
     private const int LMB = 0;
     private float[] angleOffsets = new float[] { 8f, 0f, -8f };
 
     private void OnEnable()
     {
-        _bulletsForThisGunTest = _bulletsCount;
+        DeafaultBulletsCount();
         EventManager.InvokeTransferBullets(_bulletsCount);
     }
 
+    private void Awake()
+    {
+        EventManager.RestartSceneEvent.AddListener(DeafaultBulletsCount);
+    }
+
+
     public void ReloadGun()
     {
-        _bulletsCount = _bulletsForThisGunTest;
+        _bulletsCount = _bulletsForThisGun;
         EventManager.InvokeTransferBullets(_bulletsCount);
     }
 
@@ -41,6 +47,11 @@ public class PlayerShooting : MonoBehaviour
         else
             _fireCooldown -= Time.deltaTime;
         TestReload();
+    }
+
+    private void DeafaultBulletsCount()
+    {
+        _bulletsForThisGun = _bulletsCount;
     }
 
     private void ShootByType()
@@ -69,7 +80,7 @@ public class PlayerShooting : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            _bulletsCount = _bulletsForThisGunTest;
+            _bulletsCount = _bulletsForThisGun;
             print($"Reload");
         }
     }

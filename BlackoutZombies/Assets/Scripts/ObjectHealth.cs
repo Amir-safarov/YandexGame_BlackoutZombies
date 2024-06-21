@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -22,7 +23,8 @@ public class ObjectHealth : MonoBehaviour
     [SerializeField] private BoxCollider2D _playerCollider;
     [SerializeField, Range(1, 3)] private int _health;
     [SerializeField] private bool _isPlayersHealth;
-    [SerializeField] private SpriteRenderer _deafoultSprite;
+    [SerializeField] private SpriteRenderer _platerSpriteRenderer;
+    [SerializeField] private Sprite _defaultSprite;
     [SerializeField] private Sprite _deadSprite;
     [SerializeField] private GameObject _deadPlayer;
     [SerializeField] private GameObject _deadZombieObject;
@@ -44,6 +46,20 @@ public class ObjectHealth : MonoBehaviour
     {
         if (!_playerCollider)
             _playerCollider = GetComponent<BoxCollider2D>();
+        _defaultSprite = _platerSpriteRenderer.sprite;
+    }
+
+    private void Awake()
+    {
+        EventManager.RestartSceneEvent.AddListener(SetDeafaultState);
+    }
+
+    private void SetDeafaultState()
+    {
+        _platerSpriteRenderer.sprite = _defaultSprite;
+        Health = MaxObjectHealth;
+        _platerSpriteRenderer.color = DeafaultPlayerSpriteColor;
+        _playerCollider.isTrigger = true;
     }
 
     private void OnEnable()
@@ -89,10 +105,10 @@ public class ObjectHealth : MonoBehaviour
     }
     private IEnumerator PlayerInvulnerability()
     {
-        _deafoultSprite.color = PlayerInvulnerabilitySpriteColor;
+        _platerSpriteRenderer.color = PlayerInvulnerabilitySpriteColor;
         _playerCollider.isTrigger = false;
         yield return new WaitForSeconds(InvulnerabilityTime);
-        _deafoultSprite.color = DeafaultPlayerSpriteColor;
+        _platerSpriteRenderer.color = DeafaultPlayerSpriteColor;
         _playerCollider.isTrigger = true;
     }
 
@@ -100,8 +116,8 @@ public class ObjectHealth : MonoBehaviour
     {
         if (_isPlayersHealth)
         {
-            _deafoultSprite.color = DeafaultPlayerSpriteColor;
-            _deafoultSprite.sprite = _deadSprite;
+            _platerSpriteRenderer.color = DeafaultPlayerSpriteColor;
+            _platerSpriteRenderer.sprite = _deadSprite;
             EventManager.InvokePlayersDeath();
         }
         else

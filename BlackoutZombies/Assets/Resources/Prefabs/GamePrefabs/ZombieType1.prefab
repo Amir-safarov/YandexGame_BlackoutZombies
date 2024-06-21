@@ -221,7 +221,8 @@ MonoBehaviour:
   _playerCollider: {fileID: 6193266525136398713}
   _health: 1
   _isPlayersHealth: 0
-  _deafoultSprite: {fileID: 0}
+  _platerSpriteRenderer: {fileID: 4686856316318108830}
+  _defaultSprite: {fileID: -1271855811, guid: 3cac987f9768ec7418cb96554c5bd256, type: 3}
   _deadSprite: {fileID: 0}
   _deadPlayer: {fileID: 0}
   _deadZombieObject: {fileID: 2605549905749111734, guid: 0feb79b14503e6c4187745782c771a1f, type: 3}

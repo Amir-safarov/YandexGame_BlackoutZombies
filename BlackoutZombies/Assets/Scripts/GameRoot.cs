@@ -11,6 +11,7 @@ public class GameRoot : MonoBehaviour
     private void Awake()
     {
         EventManager.PlayerDeathEvent.AddListener(ClosePlayerControll);
+        EventManager.RestartSceneEvent.AddListener(OpenPlayerControll);
     }
 
     private void Update()

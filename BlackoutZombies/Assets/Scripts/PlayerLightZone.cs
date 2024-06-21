@@ -29,14 +29,14 @@ public class PlayerLightZone : MonoBehaviour
 
     private void OnEnable()
     {
-        _isNeedToUpdateLight = true;
-        CurrentLightRange = OnStartLightRange;
-        _playerLightSource.range = CurrentLightRange;
+        StartLight();
     }
+
 
     private void Awake()
     {
         EventManager.PlayerDeathEvent.AddListener(LastLightBattery);
+        EventManager.RestartSceneEvent.AddListener(StartLight);
     }
 
     private void Update()
@@ -51,6 +51,12 @@ public class PlayerLightZone : MonoBehaviour
         CurrentLightRange = MaxLightRange;
     }
 
+    private void StartLight()
+    {
+        _isNeedToUpdateLight = true;
+        CurrentLightRange = OnStartLightRange;
+        _playerLightSource.range = CurrentLightRange;
+    }
     private void LastLightBattery()
     {
         CurrentLightRange = ExtraLightRange;

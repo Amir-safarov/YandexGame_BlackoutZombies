@@ -137,7 +137,8 @@ MonoBehaviour:
   _playerCollider: {fileID: 7503974141671348003}
   _health: 1
   _isPlayersHealth: 0
-  _deafoultSprite: {fileID: 0}
+  _platerSpriteRenderer: {fileID: 947645067930437807}
+  _defaultSprite: {fileID: -1473633633, guid: 3cac987f9768ec7418cb96554c5bd256, type: 3}
   _deadSprite: {fileID: 0}
   _deadPlayer: {fileID: 0}
   _deadZombieObject: {fileID: 2605549905749111734, guid: 0feb79b14503e6c4187745782c771a1f, type: 3}
@@ -186,7 +187,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00087347627, y: 0.0011574924}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}

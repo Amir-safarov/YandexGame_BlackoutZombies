@@ -10,6 +10,11 @@ public class PlayerMovement : MonoBehaviour, IMovable
     private const string Horizontal = "Horizontal";
     private const string Vertical = "Vertical";
 
+    private void Awake()
+    {
+        EventManager.RestartSceneEvent.AddListener(SetDeafaultPosition);
+    }
+
     public void Move()
     {
         _moveVector.x = Input.GetAxisRaw(Horizontal);
@@ -20,5 +25,10 @@ public class PlayerMovement : MonoBehaviour, IMovable
 
         transform.localRotation = Quaternion.Euler(0, 0, angle);
         transform.position += (Vector3)_moveVector.normalized * _movementSpeed * Time.deltaTime;
+    }
+
+    private void SetDeafaultPosition()
+    {
+        transform.position = Vector3.zero;
     }
 }

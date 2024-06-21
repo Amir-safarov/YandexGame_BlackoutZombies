@@ -28,6 +28,8 @@ public class ZombiesSpawner : MonoBehaviour
     private void Awake()
     {
         EventManager.PlayerDeathEvent.AddListener(DestroyZombiesList);
+        EventManager.RestartSceneEvent.AddListener(StartZombiesSpawn);
+        EventManager.RestartSceneEvent.AddListener(DisableZombies);
     }
 
     private void Start()
@@ -47,6 +49,12 @@ public class ZombiesSpawner : MonoBehaviour
 
     public void StartZombiesSpawn() =>
         StartCoroutine(FirstWaveSpawn());
+
+    private void DisableZombies()
+    {
+        foreach (var zombie in _zombiesList)
+            zombie.gameObject.SetActive(false);
+    }
 
     private IEnumerator FirstWaveSpawn()
     {

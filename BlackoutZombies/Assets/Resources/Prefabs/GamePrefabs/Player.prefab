@@ -83,12 +83,11 @@ MonoBehaviour:
   _playerCollider: {fileID: 3410884029384874994}
   _health: 3
   _isPlayersHealth: 1
-  _deafoultSprite: {fileID: 3577894056529565031}
+  _platerSpriteRenderer: {fileID: 3577894056529565031}
+  _defaultSprite: {fileID: 1738759640, guid: 4e118d412d4cbb54cb8cb0fec3ec36d1, type: 3}
   _deadSprite: {fileID: 0}
   _deadPlayer: {fileID: 5926977556210651156, guid: fc6661601a3754249a38be4ac3e0c401, type: 3}
   _deadZombieObject: {fileID: 0}
-  _gameRoot: {fileID: 0}
-  _zombiesSpawner: {fileID: 0}
 --- !u!114 &5517500034194098453
 MonoBehaviour:
   m_ObjectHideFlags: 0

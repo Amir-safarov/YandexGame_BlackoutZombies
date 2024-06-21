@@ -12,7 +12,9 @@ public class ScoreCounter : MonoBehaviour
     private void Awake()
     {
         InitialScoreVerification();
+        EventManager.RestartSceneEvent.AddListener(ResetCurrentScore);
     }
+
     private void OnEnable()
     {
         InitialScoreVerification();
@@ -29,7 +31,7 @@ public class ScoreCounter : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.Insert))
             ResetBestScore();
     }
 
@@ -69,6 +71,7 @@ public class ScoreCounter : MonoBehaviour
         {
             PlayerPrefs.SetInt(BestScore, _currentScore);
             _bestScorePP = PlayerPrefs.GetInt(BestScore);
+            PlayerPrefs.Save();
             print($"Лучший обновлен на : {_bestScorePP}");
             //
         }

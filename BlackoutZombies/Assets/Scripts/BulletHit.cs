@@ -9,9 +9,10 @@ public class BulletHit : MonoBehaviour
     {
         if (collision.CompareTag(ZombieTag))
         {
-            collision.GetComponent<ObjectHealth>().TakeDamage(BulletDamage);
             Destroy(gameObject);
+            collision.GetComponent<ObjectHealth>().TakeDamage(BulletDamage);
             EventManager.InvokeTransferZombieDeath();
+            print("Выстрел защитан");
         }
     }
 }

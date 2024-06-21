@@ -68,6 +68,14 @@ PrefabInstance:
       propertyPath: _deadSprite
       value: 
       objectReference: {fileID: -1415131640, guid: 1cec5d4b644491c44ac6d1711654cf81, type: 3}
+    - target: {fileID: 3524168373192873214, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
+      propertyPath: _defaultSprite
+      value: 
+      objectReference: {fileID: 64004916, guid: 84ae2778efcd0d443b4d682418a25f21, type: 3}
+    - target: {fileID: 3524168373192873214, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
+      propertyPath: _platerSpriteRenderer
+      value: 
+      objectReference: {fileID: 2701515953849697814}
     - target: {fileID: 3577894056529565031, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -108,6 +116,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4330690689868025859}
   m_SourcePrefab: {fileID: 100100000, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
+--- !u!212 &2701515953849697814 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3577894056529565031, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}
+  m_PrefabInstance: {fileID: 1502669292111270769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2870048140103792814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3679150975538834399, guid: cb61a41b8f6409e4181f83c6feeb6505, type: 3}

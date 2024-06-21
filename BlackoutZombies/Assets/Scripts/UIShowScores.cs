@@ -1,8 +1,7 @@
-using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-[RequireComponent(typeof(TextMeshProUGUI))]
 public class UIShowScores : MonoBehaviour
 {
     private enum RequiredText
@@ -13,43 +12,53 @@ public class UIShowScores : MonoBehaviour
         BestScore,
     }
 
-    [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private TextMeshProUGUI _scoreTextTMP;
     [SerializeField] private DeadZombiesCounter _deadZombiesScore;
     [SerializeField] private ScoreCounter _score;
     [SerializeField] private RequiredText _requiredText;
 
+
     private void OnValidate()
     {
-        if (_scoreText == null)
-            _scoreText = GetComponent<TextMeshProUGUI>();
+        if (_scoreTextTMP == null)
+            _scoreTextTMP = GetComponent<TextMeshProUGUI>();
+    }
+
+    private void Awake()
+    {
+        EventManager.TransferZombieDeathEvent.AddListener(SelectText);
     }
 
     private void OnEnable()
     {
-        ShowCurrentText();
+        SelectText();
     }
 
-    private void ShowCurrentText()
+    private void SelectText()
+    {
+        ShowCurrentTextTMP();
+    }
+
+    private void ShowCurrentTextTMP()
     {
         switch (_requiredText)
         {
             case RequiredText.CurrentDeadZombies:
-                _scoreText.text =
+                _scoreTextTMP.text =
                     _deadZombiesScore.GetCurrentDeadZombiesCount().ToString();
                 break;
             case RequiredText.TotalDeadZombies:
-                _scoreText.text =
+                _scoreTextTMP.text =
                     _deadZombiesScore.GetTotalDeadZombiesCount().ToString();
                 break;
             case RequiredText.CurrentScore:
-                _scoreText.text =
+                _scoreTextTMP.text =
                     _score.GetCurrentScore().ToString();
                 break;
             case RequiredText.BestScore:
-                _scoreText.text =
+                _scoreTextTMP.text =
                     _score.GetBestScoreScore().ToString();
                 break;
         }
-
     }
 }

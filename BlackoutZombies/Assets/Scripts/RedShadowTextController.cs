@@ -24,9 +24,6 @@ public class RedShadowTextController : MonoBehaviour
             if (_boldText.fontSize > MaxFontSize)
                 _boldText.fontSize = MaxFontSize;
             _normalText.fontSize = _boldText.fontSize;
-
         }
     }
-
-
 }

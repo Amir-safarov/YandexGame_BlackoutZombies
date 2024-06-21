@@ -5,13 +5,22 @@ public class CaneraOrthoResize : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera _cam;
 
+    private const float DeathCamSize = 10;
+    private const float DeafaultCamSize = 5.3f;
+
     private void Awake()
     {
-        EventManager.PlayerDeathEvent.AddListener(ResizeCam);
+        EventManager.PlayerDeathEvent.AddListener(ResizeCamAfterDeafth);
+        EventManager.RestartSceneEvent.AddListener(RestartResizeCam);
     }
 
-    private void ResizeCam()
+    private void ResizeCamAfterDeafth()
     {
-        _cam.m_Lens.OrthographicSize = 10;
+        _cam.m_Lens.OrthographicSize = DeathCamSize;
+    }
+
+    private void RestartResizeCam()
+    {
+        _cam.m_Lens.OrthographicSize = DeafaultCamSize;
     }
 }

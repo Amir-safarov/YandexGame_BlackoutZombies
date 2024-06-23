@@ -73,6 +73,11 @@ public class ObjectHealth : MonoBehaviour
         CheckDamageObjectHit(collision);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        CheckDamageObjectHit(collision);
+    }
+
     public void HealthPointUpObject(int outHPUp)
     {
         Health += outHPUp;
@@ -88,6 +93,14 @@ public class ObjectHealth : MonoBehaviour
     private void CheckDamageObjectHit(Collider2D collision)
     {
         if (collision.CompareTag(DamageObjectTag))
+        {
+            TakeDamage(DamageObjectDamage);
+            EventManager.InvokeTransferHeart(Health);
+        }
+    }
+    private void CheckDamageObjectHit(Collision2D collision)
+    {
+        if (collision.collider.CompareTag(DamageObjectTag))
         {
             TakeDamage(DamageObjectDamage);
             EventManager.InvokeTransferHeart(Health);

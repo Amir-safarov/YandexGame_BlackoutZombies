@@ -356,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 44366402}
   - component: {fileID: 44366403}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 68654076}
   - component: {fileID: 68654077}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1054,7 +1054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100427351}
   - component: {fileID: 100427352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 101501329}
   - component: {fileID: 101501330}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113282732}
   - component: {fileID: 113282733}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1306,7 +1306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 114272613}
   - component: {fileID: 114272614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1587,6 +1587,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 6193266525136398713, guid: b6381b13123f1d443be649f36fb760da, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8028345744472950767, guid: b6381b13123f1d443be649f36fb760da, type: 3}
       propertyPath: _playerePosition
       value: 
@@ -1736,7 +1740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 163768171}
   - component: {fileID: 163768172}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1820,7 +1824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 169890892}
   - component: {fileID: 169890893}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1903,7 +1907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 175778031}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FloorDecore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2058,7 +2062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 176589461}
   - component: {fileID: 176589462}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2142,7 +2146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 181359156}
   - component: {fileID: 181359157}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2365,7 +2369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198876504}
   - component: {fileID: 198876505}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2449,7 +2453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 203688932}
   - component: {fileID: 203688933}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2538,7 +2542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224998800}
   - component: {fileID: 224998801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2622,7 +2626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 235902023}
   - component: {fileID: 235902024}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2768,7 +2772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 239719883}
   - component: {fileID: 239719884}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3162,7 +3166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 274570826}
   - component: {fileID: 274570827}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3251,7 +3255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 275608777}
   - component: {fileID: 275608778}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3335,7 +3339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 277098701}
   - component: {fileID: 277098702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3849,7 +3853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 334730807}
   - component: {fileID: 334730808}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3995,7 +3999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358114632}
   - component: {fileID: 358114633}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4313,7 +4317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390466111}
   - component: {fileID: 390466112}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4397,7 +4401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 406018372}
   - component: {fileID: 406018373}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4858,7 +4862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478724843}
   - component: {fileID: 478724844}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5004,7 +5008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 481824300}
   - component: {fileID: 481824301}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5287,7 +5291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 536718827}
   - component: {fileID: 536718828}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6471,7 +6475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 631572842}
   - component: {fileID: 631572843}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6555,7 +6559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 640418517}
   - component: {fileID: 640418518}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6813,7 +6817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 692991177}
   - component: {fileID: 692991178}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6964,7 +6968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 713581395}
   - component: {fileID: 713581396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7285,6 +7289,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2070730869317925831, guid: b6381b13123f1d443be649f36fb760da, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501649955979911291, guid: b6381b13123f1d443be649f36fb760da, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6076023273220784775, guid: b6381b13123f1d443be649f36fb760da, type: 3}
       propertyPath: m_Name
       value: ZombieType1 (10)
@@ -7296,6 +7308,10 @@ PrefabInstance:
     - target: {fileID: 6076023273220784775, guid: b6381b13123f1d443be649f36fb760da, type: 3}
       propertyPath: m_TagString
       value: Zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878841690877041826, guid: b6381b13123f1d443be649f36fb760da, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8028345744472950767, guid: b6381b13123f1d443be649f36fb760da, type: 3}
       propertyPath: _playerePosition
@@ -7316,7 +7332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 772943429}
   - component: {fileID: 772943430}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7400,7 +7416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776540649}
   - component: {fileID: 776540650}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7484,7 +7500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 781480584}
   - component: {fileID: 781480583}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ItemsSpawnArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7561,7 +7577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 786593226}
   - component: {fileID: 786593227}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7682,7 +7698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 819911435}
   - component: {fileID: 819911436}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8046,7 +8062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 853841056}
   - component: {fileID: 853841057}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8130,7 +8146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 855828991}
   - component: {fileID: 855828992}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8214,7 +8230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 859211978}
   - component: {fileID: 859211979}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8416,7 +8432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885989972}
   - component: {fileID: 885989973}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9160,7 +9176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 950223108}
   - component: {fileID: 950223109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9244,7 +9260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 961320065}
   - component: {fileID: 961320066}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9333,7 +9349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 969221542}
   - component: {fileID: 969221543}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9530,7 +9546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 980325472}
   - component: {fileID: 980325473}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9614,7 +9630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 985650010}
   - component: {fileID: 985650011}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9698,7 +9714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 993537216}
   - component: {fileID: 993537217}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9782,7 +9798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996916785}
   - component: {fileID: 996916786}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9866,7 +9882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000808534}
   - component: {fileID: 1000808535}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9950,7 +9966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1006766259}
   - component: {fileID: 1006766260}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10034,7 +10050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1021470973}
   - component: {fileID: 1021470974}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10428,7 +10444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1041834414}
   - component: {fileID: 1041834415}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10575,7 +10591,7 @@ GameObject:
   - component: {fileID: 1048309245}
   - component: {fileID: 1048309244}
   - component: {fileID: 1048309246}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10710,7 +10726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054154812}
   - component: {fileID: 1054154813}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10853,6 +10869,10 @@ PrefabInstance:
       propertyPath: _playerePosition
       value: 
       objectReference: {fileID: 1284184144}
+    - target: {fileID: 7503974141671348003, guid: dfb0282d06f9f6b469b9e5b5b82fa91f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10943,7 +10963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1075290143}
   - component: {fileID: 1075290144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11307,7 +11327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1116555524}
   - component: {fileID: 1116555525}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11391,7 +11411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1121529473}
   - component: {fileID: 1121529474}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11475,7 +11495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1121605351}
   - component: {fileID: 1121605352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11621,7 +11641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1143404292}
   - component: {fileID: 1143404293}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11779,7 +11799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159081145}
   - component: {fileID: 1159081146}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12036,6 +12056,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 6193266525136398713, guid: b6381b13123f1d443be649f36fb760da, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8028345744472950767, guid: b6381b13123f1d443be649f36fb760da, type: 3}
       propertyPath: _playerePosition
       value: 
@@ -12055,7 +12079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1187021902}
   - component: {fileID: 1187021903}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12466,7 +12490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1210773203}
   - component: {fileID: 1210773204}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12612,7 +12636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1222616406}
   - component: {fileID: 1222616407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12765,7 +12789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1231151198}
   - component: {fileID: 1231151199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12907,7 +12931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1255768186}
   - component: {fileID: 1255768187}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13053,7 +13077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1264736107}
   - component: {fileID: 1264736108}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13137,7 +13161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277197956}
   - component: {fileID: 1277197957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13226,7 +13250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283845738}
   - component: {fileID: 1283845739}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13645,7 +13669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1294190609}
   - component: {fileID: 1294190610}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13729,7 +13753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1295965240}
   - component: {fileID: 1295965241}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13888,7 +13912,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1298718807}
   - component: {fileID: 1298718808}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13972,7 +13996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1310296190}
   - component: {fileID: 1310296191}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14056,7 +14080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1314909910}
   - component: {fileID: 1314909911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14194,6 +14218,10 @@ PrefabInstance:
       propertyPath: _playerePosition
       value: 
       objectReference: {fileID: 1284184144}
+    - target: {fileID: 7503974141671348003, guid: dfb0282d06f9f6b469b9e5b5b82fa91f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14209,7 +14237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1338719962}
   - component: {fileID: 1338719963}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14410,7 +14438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1380339398}
   - component: {fileID: 1380339399}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14494,7 +14522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1381784512}
   - component: {fileID: 1381784513}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14578,7 +14606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1394781588}
   - component: {fileID: 1394781589}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15448,7 +15476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1441715118}
   - component: {fileID: 1441715119}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15587,6 +15615,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 6193266525136398713, guid: b6381b13123f1d443be649f36fb760da, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8028345744472950767, guid: b6381b13123f1d443be649f36fb760da, type: 3}
       propertyPath: _playerePosition
       value: 
@@ -15668,7 +15700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1473681853}
   - component: {fileID: 1473681854}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15752,7 +15784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1476604769}
   - component: {fileID: 1476604770}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15836,7 +15868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486357416}
   - component: {fileID: 1486357417}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15920,7 +15952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486616407}
   - component: {fileID: 1486616408}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16066,7 +16098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1513057184}
   - component: {fileID: 1513057185}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16150,7 +16182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1526235198}
   - component: {fileID: 1526235199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16452,7 +16484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1560062085}
   - component: {fileID: 1560062086}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16536,7 +16568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1566493237}
   - component: {fileID: 1566493238}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16810,7 +16842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1577413977}
   - component: {fileID: 1577413978}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16940,7 +16972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1587665849}
   - component: {fileID: 1587665850}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17091,7 +17123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1618807493}
   - component: {fileID: 1618807494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17298,7 +17330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1633296186}
   - component: {fileID: 1633296187}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17457,7 +17489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1640155019}
   - component: {fileID: 1640155020}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17965,7 +17997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1700126397}
   - component: {fileID: 1700126398}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18198,7 +18230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1719340144}
   - component: {fileID: 1719340145}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18347,6 +18379,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 489805755}
     m_Modifications:
+    - target: {fileID: 3597702942144177178, guid: 74b4c8bd118f59042852dd0f90cf908e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3659075264742305217, guid: 74b4c8bd118f59042852dd0f90cf908e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.4
@@ -18473,7 +18509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1737144003}
   - component: {fileID: 1737144004}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18557,7 +18593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1738020937}
   - component: {fileID: 1738020938}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18760,7 +18796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1796371528}
   - component: {fileID: 1796371529}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18881,7 +18917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1811562434}
   - component: {fileID: 1811562435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19243,7 +19279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1839376376}
   - component: {fileID: 1839376377}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19327,7 +19363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1848984014}
   - component: {fileID: 1848984015}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19411,7 +19447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1855015577}
   - component: {fileID: 1855015578}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19495,7 +19531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1855570695}
   - component: {fileID: 1855570696}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19702,7 +19738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1876053599}
   - component: {fileID: 1876053600}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19802,7 +19838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1907695286}
   - component: {fileID: 1907695287}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19886,7 +19922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1911627581}
   - component: {fileID: 1911627582}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20031,7 +20067,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918998768}
   - component: {fileID: 1918998769}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20115,7 +20151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1920380167}
   - component: {fileID: 1920380168}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20343,7 +20379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1950123461}
   - component: {fileID: 1950123462}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20427,7 +20463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953298790}
   - component: {fileID: 1953298791}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20511,7 +20547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1955334490}
   - component: {fileID: 1955334491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20808,7 +20844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965115148}
   - component: {fileID: 1965115149}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20937,7 +20973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1974329843}
   - component: {fileID: 1974329844}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21129,7 +21165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1990276244}
   - component: {fileID: 1990276245}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21213,7 +21249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1990352297}
   - component: {fileID: 1990352298}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21302,7 +21338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1997858204}
   - component: {fileID: 1997858205}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21448,7 +21484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2000387538}
   - component: {fileID: 2000387539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21532,7 +21568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2000566497}
   - component: {fileID: 2000566498}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21616,7 +21652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2001175215}
   - component: {fileID: 2001175216}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22008,7 +22044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2014528413}
   - component: {fileID: 2014528414}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22092,7 +22128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2015134198}
   - component: {fileID: 2015134199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_1 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22176,7 +22212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2017103537}
   - component: {fileID: 2017103538}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_2 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22260,7 +22296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2034281759}
   - component: {fileID: 2034281760}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22869,7 +22905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2114682270}
   - component: {fileID: 2114682271}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22953,7 +22989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2116200710}
   - component: {fileID: 2116200711}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: flootExample_3 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

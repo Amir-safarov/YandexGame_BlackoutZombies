@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 8028345744472950767}
   - component: {fileID: 6193266525136398713}
   - component: {fileID: 6842949957413607410}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ZombieType1
   m_TagString: DamageObject
   m_Icon: {fileID: 0}

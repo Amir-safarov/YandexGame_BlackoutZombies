@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class ZombiesSpawner : MonoBehaviour
     {
         get
         {
-            if (zombieSpawnCounter >= _zombiesList.Count)
+            if (zombieSpawnCounter >= _zombiesList.Count - 1)
                 zombieSpawnCounter = 0;
             return zombieSpawnCounter;
         }
@@ -19,6 +20,7 @@ public class ZombiesSpawner : MonoBehaviour
     [SerializeField] private GameObject _zombiePrefabType1;
     [SerializeField] private GameObject _zombiePrefabType2;
     [SerializeField] private Transform _zombiesOnScene;
+    [SerializeField] private BoxCollider2D _spawnCollider;
     [SerializeField] private List<ZombieMovement> _zombiesList;
     [SerializeField] private List<Transform> _spawnPointList;
     [SerializeField] private float _spawnInterval;
@@ -61,7 +63,7 @@ public class ZombiesSpawner : MonoBehaviour
         while (true)
         {
             if (_zombiesList[ZombieSpawnCounter].gameObject.activeSelf)
-                yield return null;
+                continue;
             else
             {
                 SpawnZombies(_zombiesList[ZombieSpawnCounter]);
@@ -73,9 +75,20 @@ public class ZombiesSpawner : MonoBehaviour
 
     private void SpawnZombies(ZombieMovement _zombie)
     {
-        int spawnPointIndex = Random.Range(0, _spawnPointList.Count);
-        _zombie.transform.position = _spawnPointList[spawnPointIndex].position;
+        _zombie.transform.position = GetSpawnPoint();
         _zombie.OpenZombieMove();
         _zombie.gameObject.SetActive(true);
+    }
+
+    private Vector3 GetSpawnPoint()
+    {
+        while (true)
+        {
+            int spawnPointIndex = Random.Range(0, _spawnPointList.Count);
+            Vector3 spawnPos = _spawnPointList[spawnPointIndex].position;
+            if (_spawnCollider.bounds.Contains(spawnPos))
+                return spawnPos;
+            else continue;
+        }
     }
 }

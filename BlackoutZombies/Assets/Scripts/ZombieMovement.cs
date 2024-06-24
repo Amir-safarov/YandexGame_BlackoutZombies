@@ -8,8 +8,8 @@ public class ZombieMovement : MonoBehaviour, IMovable
     private float _movementSpeed;
     private bool _canMove;
 
-    private const float _minMovementSpeed = 3f;
-    private const float _maxMovementSpeed = 4f;
+    private const float _minMovementSpeed = 3.2f;
+    private const float _maxMovementSpeed = 4.4f;
 
 
     private void OnEnable()

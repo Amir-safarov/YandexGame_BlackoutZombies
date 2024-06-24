@@ -87,7 +87,7 @@ public class ObjectHealth : MonoBehaviour
     public void TakeDamage(int outDamage)
     {
         Health -= outDamage;
-        print($"{name} taked damage {outDamage}. Health {Health}");
+        print($"{name} taked damage {outDamage}.\n Health {Health}");
     }
 
     private void CheckDamageObjectHit(Collider2D collision)

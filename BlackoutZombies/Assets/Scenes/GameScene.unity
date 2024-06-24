@@ -3793,7 +3793,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.7
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7501,7 +7501,7 @@ GameObject:
   - component: {fileID: 781480584}
   - component: {fileID: 781480583}
   m_Layer: 7
-  m_Name: ItemsSpawnArea
+  m_Name: ObjectsSpawnArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12058,7 +12058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6193266525136398713, guid: b6381b13123f1d443be649f36fb760da, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8028345744472950767, guid: b6381b13123f1d443be649f36fb760da, type: 3}
       propertyPath: _playerePosition
@@ -12305,7 +12305,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.35
+  m_fontSize: 58.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

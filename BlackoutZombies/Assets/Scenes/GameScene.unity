@@ -23282,6 +23282,10 @@ PrefabInstance:
       value: 5.3500004
       objectReference: {fileID: 0}
     - target: {fileID: 3626565762336181895, guid: da5100619e8f50f4aaad6682681df293, type: 3}
+      propertyPath: _spawnCollider
+      value: 
+      objectReference: {fileID: 781480583}
+    - target: {fileID: 3626565762336181895, guid: da5100619e8f50f4aaad6682681df293, type: 3}
       propertyPath: _zombiesOnScene
       value: 
       objectReference: {fileID: 1245471497}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using YG;
 using static DeadZombiesCounter;
 
 public class ScoreCounter : MonoBehaviour
@@ -17,7 +18,14 @@ public class ScoreCounter : MonoBehaviour
 
     private void OnEnable()
     {
-        InitialScoreVerification();
+        YandexGame.GetDataEvent +=
+            InitialScoreVerification;
+    }
+
+    private void OnDisable()
+    { 
+        YandexGame.GetDataEvent -=
+            InitialScoreVerification;
     }
 
     private void InitialScoreVerification()
@@ -25,8 +33,11 @@ public class ScoreCounter : MonoBehaviour
         if (!PlayerPrefs.HasKey(BestScore))
             PlayerPrefs.SetInt(BestScore, 0);
         _bestScorePP = PlayerPrefs.GetInt(BestScore);
-        print($"Лучший счет на начало: {_bestScorePP}");
         EventManager.TransferScoreEvent.AddListener(RegistartionScore);
+        if (!YandexGame.SDKEnabled)
+            return;
+        _bestScoreYG = YandexGame.savesData.score;
+        print($"Лучший счет на начало: {_bestScorePP}");
     }
 
     private void Update()
@@ -35,11 +46,13 @@ public class ScoreCounter : MonoBehaviour
             ResetBestScore();
     }
 
-    public int GetCurrentScore() {
+    public int GetCurrentScore()
+    {
         return _currentScore;
     }
 
-    public int GetBestScoreScore() {
+    public int GetBestScoreScore()
+    {
         return _bestScorePP;
     }
 
@@ -72,8 +85,8 @@ public class ScoreCounter : MonoBehaviour
             PlayerPrefs.SetInt(BestScore, _currentScore);
             _bestScorePP = PlayerPrefs.GetInt(BestScore);
             PlayerPrefs.Save();
+            YandexGame.NewLeaderboardScores("Название таблицы", _bestScorePP);
             print($"Лучший обновлен на : {_bestScorePP}");
-            //
         }
     }
 

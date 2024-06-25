@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using YG;
 
 public class DeadZombiesCounter : MonoBehaviour
 {
@@ -19,12 +20,32 @@ public class DeadZombiesCounter : MonoBehaviour
 
     private void Awake()
     {
+        InitialScoreVerification();
+        EventManager.RestartSceneEvent.AddListener(ResetCurrentDeadZombies);
+    }
+
+    private void OnEnable()
+    {
+        YandexGame.GetDataEvent +=
+           InitialScoreVerification;
+    }
+
+    private void OnDisable()
+    {
+        YandexGame.GetDataEvent +=
+           InitialScoreVerification;
+    }
+
+    private void InitialScoreVerification()
+    {
         if (!PlayerPrefs.HasKey(TotalDeadZombiesCount))
             PlayerPrefs.SetInt(TotalDeadZombiesCount, 0);
         _totalDeadZombiesPP = PlayerPrefs.GetInt(TotalDeadZombiesCount);
         print($"Лучший счет по убийствам на начало: {_totalDeadZombiesPP}");
         EventManager.TransferZombieDeathEvent.AddListener(RegistartionNewZombie);
-        EventManager.RestartSceneEvent.AddListener(ResetCurrentDeadZombies);
+        if (!YandexGame.SDKEnabled)
+            return;
+        _totalDeadZombiesYG = YandexGame.savesData.totalDeadZombiesCount;
     }
 
     public int GetCurrentDeadZombiesCount()

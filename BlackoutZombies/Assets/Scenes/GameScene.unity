@@ -5932,13 +5932,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2143510995}
+        m_TargetAssemblyTypeName: ReviveInvoke, Assembly-CSharp
+        m_MethodName: RevivePlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -25199,6 +25199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4e610cef699004790ea399eb7c3dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inputKeyboard: {fileID: 975925043}
 --- !u!1001 &2053933534415106594
 PrefabInstance:
   m_ObjectHideFlags: 0

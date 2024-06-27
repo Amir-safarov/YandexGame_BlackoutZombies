@@ -7,6 +7,7 @@ public class EventManager : MonoBehaviour
     public static UnityEvent PlayerDeathEvent = new UnityEvent();
     public static UnityEvent<int> TransferHeartCountEvent = new UnityEvent<int>();
     public static UnityEvent<int> TransferBulletsCountEvent = new UnityEvent<int>();
+    public static UnityEvent<int> TransferTotalDeadZombieCountEvent = new UnityEvent<int>();
     public static UnityEvent<ScoringStates> TransferScoreEvent = new UnityEvent<ScoringStates>();
     public static UnityEvent TransferZombieDeathEvent = new UnityEvent();
     public static UnityEvent RestartSceneEvent = new UnityEvent();
@@ -16,6 +17,9 @@ public class EventManager : MonoBehaviour
 
     public static void InvokeTransferHeart(int heartCount) =>
         TransferHeartCountEvent.Invoke(heartCount);
+
+    public static void InvokeTransferTotalDeadZombieCount(int gunIndex) =>
+        TransferTotalDeadZombieCountEvent.Invoke(gunIndex);
 
     public static void InvokeTransferBullets(int bulletsCount) =>
         TransferBulletsCountEvent.Invoke(bulletsCount);

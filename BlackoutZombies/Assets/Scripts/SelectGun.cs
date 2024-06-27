@@ -6,6 +6,7 @@ public class SelectGun : MonoBehaviour
 {
     [SerializeField] private List<Image> gunImagesList;
     [SerializeField] private List<GameObject> playerTypesList;
+
     [Header("To Start References")]
     [SerializeField] private GameRoot _gameRoot;
     [SerializeField] private GameObject _spawnPoint;
@@ -33,12 +34,14 @@ public class SelectGun : MonoBehaviour
     private void Start()
     {
         ShowSelectedGun();
+        EventManager.InvokeTransferTotalDeadZombieCount(SelectedGunIndex);
     }
 
     public void SelectNextGun(bool _toRight)
     {
         SelectedGunIndex += _toRight ? 1 : -1; 
         ShowSelectedGun();
+        EventManager.InvokeTransferTotalDeadZombieCount(SelectedGunIndex);
     }
 
     public void StartToPlay()

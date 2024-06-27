@@ -28,7 +28,7 @@ public class GameRoot : MonoBehaviour
             _playerShooting = GameObject.FindGameObjectWithTag(PlayerTag).GetComponent<PlayerShooting>();
     }
 
-    public void OpenPlayerControll() =>
+    public void OpenPlayerControll(bool isReviev = false) =>
         _canPlayerControll = true;
 
     public void ClosePlayerControll() =>

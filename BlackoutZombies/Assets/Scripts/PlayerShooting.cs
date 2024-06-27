@@ -49,7 +49,7 @@ public class PlayerShooting : MonoBehaviour
         TestReload();
     }
 
-    private void DeafaultBulletsCount()
+    private void DeafaultBulletsCount(bool isRevive = false)
     {
         _bulletsForThisGun = _bulletsCount;
     }

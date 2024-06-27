@@ -10,7 +10,7 @@ public class EventManager : MonoBehaviour
     public static UnityEvent<int> TransferTotalDeadZombieCountEvent = new UnityEvent<int>();
     public static UnityEvent<ScoringStates> TransferScoreEvent = new UnityEvent<ScoringStates>();
     public static UnityEvent TransferZombieDeathEvent = new UnityEvent();
-    public static UnityEvent RestartSceneEvent = new UnityEvent();
+    public static UnityEvent<bool> RestartSceneEvent = new UnityEvent<bool>();
 
     public static void InvokePlayersDeath() =>
         PlayerDeathEvent.Invoke();
@@ -30,6 +30,6 @@ public class EventManager : MonoBehaviour
     public static void InvokeTransferZombieDeath() =>
       TransferZombieDeathEvent.Invoke();
 
-    public static void InvokeRestartScene() =>
-      RestartSceneEvent.Invoke();
+    public static void InvokeRestartScene(bool isReviev) =>
+      RestartSceneEvent.Invoke(isReviev);
 }

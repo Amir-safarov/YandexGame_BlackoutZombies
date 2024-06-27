@@ -51,12 +51,13 @@ public class PlayerLightZone : MonoBehaviour
         CurrentLightRange = MaxLightRange;
     }
 
-    private void StartLight()
+    private void StartLight(bool isRevive = false)
     {
         _isNeedToUpdateLight = true;
         CurrentLightRange = OnStartLightRange;
         _playerLightSource.range = CurrentLightRange;
     }
+
     private void LastLightBattery()
     {
         CurrentLightRange = ExtraLightRange;

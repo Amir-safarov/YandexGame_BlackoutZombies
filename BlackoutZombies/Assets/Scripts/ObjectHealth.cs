@@ -54,7 +54,7 @@ public class ObjectHealth : MonoBehaviour
         EventManager.RestartSceneEvent.AddListener(SetDeafaultState);
     }
 
-    private void SetDeafaultState()
+    private void SetDeafaultState(bool isReviev)
     {
         _platerSpriteRenderer.sprite = _defaultSprite;
         Health = MaxObjectHealth;

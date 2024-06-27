@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour, IMovable
 
     private const string Horizontal = "Horizontal";
     private const string Vertical = "Vertical";
+    private readonly Vector3 DeafaultPosition = Vector3.zero;
 
     private void Awake()
     {
@@ -27,8 +28,8 @@ public class PlayerMovement : MonoBehaviour, IMovable
         transform.position += (Vector3)_moveVector.normalized * _movementSpeed * Time.deltaTime;
     }
 
-    private void SetDeafaultPosition()
+    private void SetDeafaultPosition(bool isReviev)
     {
-        transform.position = Vector3.zero;
+        transform.position = DeafaultPosition;
     }
 }

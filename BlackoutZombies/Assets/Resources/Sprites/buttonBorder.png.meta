@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea73a8b2afd510d4ca85b6561a7426b7
+guid: 996393d3071d14b48a071961eebd0bbd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 32
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -110,22 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: border 1_0
+      name: buttonBorder_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 8
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 11, y: 11, z: 11, w: 11}
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 043a31e0cf788df4aa61390af8dd17a8
-      internalID: 1144959329
+      spriteID: 3ab1ec2ea7a23cb46bf2b4ed9c455e13
+      internalID: 1016704170
       vertices: []
       indices: 
       edges: []
@@ -141,8 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      border 1_0: 1144959329
-      border 1_1: 679636790
+      buttonBorder_0: 1016704170
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

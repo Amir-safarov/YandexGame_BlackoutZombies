@@ -9,12 +9,15 @@ public class InputKeyboardUI : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
-        {
-            EventManager.InvokeRestartScene();
-            _restartCanvasController.ObjectOff();
-            _gameCanvasController.ObjectOn();
-        }
+            RestartScene();
         if (Input.GetKeyDown(KeyCode.Escape))
             _loadSceneController.LoadNewScene();
+    }
+
+    public void RestartScene(bool isRevive = false)
+    {
+        EventManager.InvokeRestartScene(isRevive);
+        _restartCanvasController.ObjectOff();
+        _gameCanvasController.ObjectOn();
     }
 }

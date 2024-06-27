@@ -26,15 +26,10 @@ public class UIShowScores : MonoBehaviour
 
     private void Awake()
     {
-        EventManager.TransferZombieDeathEvent.AddListener(SelectText);
+        EventManager.TransferZombieDeathEvent.AddListener(ShowCurrentTextTMP);
     }
 
     private void OnEnable()
-    {
-        SelectText();
-    }
-
-    private void SelectText()
     {
         ShowCurrentTextTMP();
     }

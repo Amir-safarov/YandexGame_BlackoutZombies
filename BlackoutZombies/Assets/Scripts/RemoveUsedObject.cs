@@ -8,6 +8,6 @@ public class RemoveUsedObject : MonoBehaviour
         EventManager.RestartSceneEvent.AddListener(RemoveBody);
     }
 
-    private void RemoveBody() =>
+    private void RemoveBody(bool isReviev) =>
         Destroy(gameObject);
 }

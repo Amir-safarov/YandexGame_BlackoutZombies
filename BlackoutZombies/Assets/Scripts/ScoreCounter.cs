@@ -5,10 +5,16 @@ using static DeadZombiesCounter;
 public class ScoreCounter : MonoBehaviour
 {
     private const string BestScore = "BestScore";
+    private const int FirstValueScoreState = 100;
+    private const int SecondValueScoreState = 150;
+    private const int ThirdValueScoreState = 300;
+
 
     private int _bestScorePP;
     private int _currentScore;
     private int _bestScoreYG;
+
+
 
     private void Awake()
     {
@@ -61,23 +67,24 @@ public class ScoreCounter : MonoBehaviour
         PlayerPrefs.SetInt(BestScore, 0);
     }
 
-    private void ResetCurrentScore()
+    private void ResetCurrentScore(bool isReviev)
     {
+        if (isReviev)
+            return;
         _currentScore = 0;
     }
 
     private void RegistartionScore(ScoringStates scoringStates)
     {
         if (ScoringStates.FirstState == scoringStates)
-            _currentScore += 100;
+            _currentScore += FirstValueScoreState;
         else if (ScoringStates.SecondState == scoringStates)
-            _currentScore += 150;
+            _currentScore += SecondValueScoreState;
         else if (ScoringStates.FirstState == scoringStates)
-            _currentScore += 300;
+            _currentScore += ThirdValueScoreState;
         CheckBestScore();
     }
 
-    //tobo make set new score lisener 
     private void CheckBestScore()
     {
         if (_currentScore > _bestScorePP)

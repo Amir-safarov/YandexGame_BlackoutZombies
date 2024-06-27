@@ -49,10 +49,10 @@ public class ZombiesSpawner : MonoBehaviour
         StopAllCoroutines();
     }
 
-    public void StartZombiesSpawn() =>
+    public void StartZombiesSpawn(bool isRevive = false) =>
         StartCoroutine(FirstWaveSpawn());
 
-    private void DisableZombies()
+    private void DisableZombies(bool isRevive)
     {
         foreach (var zombie in _zombiesList)
             zombie.gameObject.SetActive(false);

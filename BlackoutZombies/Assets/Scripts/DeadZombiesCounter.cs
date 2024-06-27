@@ -11,10 +11,9 @@ public class DeadZombiesCounter : MonoBehaviour
         ThirdState,
     }
 
-
-    private int _currentDeadZombies;
-    private int _totalDeadZombiesPP;
-    private int _totalDeadZombiesYG;
+    private float _currentDeadZombies;
+    private float _totalDeadZombiesPP;
+    private float _totalDeadZombiesYG;
 
     private const string TotalDeadZombiesCount = "TotalDeadZombiesCount";
 
@@ -48,25 +47,25 @@ public class DeadZombiesCounter : MonoBehaviour
         _totalDeadZombiesYG = YandexGame.savesData.totalDeadZombiesCount;
     }
 
-    public int GetCurrentDeadZombiesCount()
+    public float GetCurrentDeadZombiesCount()
     {
         return _currentDeadZombies;
     }
 
-    public int GetTotalDeadZombiesCount()
+    public float GetTotalDeadZombiesCount()
     {
         return _totalDeadZombiesPP;
     }
 
     private void RegistartionNewZombie()
     {
-        _currentDeadZombies++;
+        _currentDeadZombies += 0.5f;
         print($"Убито сейчас зомби: {_currentDeadZombies}");
-        TransferScoruingState();
+        TransferScoringState();
         CheckDeadZombiesCount();
     }
 
-    private void TransferScoruingState()
+    private void TransferScoringState()
     {
         if (_currentDeadZombies < 10)
             EventManager.InvokeTransferScore(ScoringStates.FirstState);
@@ -80,14 +79,16 @@ public class DeadZombiesCounter : MonoBehaviour
     {
         if (_currentDeadZombies > _totalDeadZombiesPP)
         {
-            PlayerPrefs.SetInt(TotalDeadZombiesCount, _currentDeadZombies);
-            _totalDeadZombiesPP = PlayerPrefs.GetInt(TotalDeadZombiesCount);
+            PlayerPrefs.SetFloat(TotalDeadZombiesCount, _currentDeadZombies);
+            _totalDeadZombiesPP = PlayerPrefs.GetFloat(TotalDeadZombiesCount);
             print($"Новый лучший счет по убийствам: {_totalDeadZombiesPP}");
         }
     }
 
-    private void ResetCurrentDeadZombies()
+    private void ResetCurrentDeadZombies(bool isReviev)
     {
+        if (isReviev)
+            return;
         _currentDeadZombies = 0;
     }
 }

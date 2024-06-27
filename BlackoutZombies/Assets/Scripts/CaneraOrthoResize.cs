@@ -19,7 +19,7 @@ public class CaneraOrthoResize : MonoBehaviour
         _cam.m_Lens.OrthographicSize = DeathCamSize;
     }
 
-    private void RestartResizeCam()
+    private void RestartResizeCam(bool isReviev)
     {
         _cam.m_Lens.OrthographicSize = DeafaultCamSize;
     }

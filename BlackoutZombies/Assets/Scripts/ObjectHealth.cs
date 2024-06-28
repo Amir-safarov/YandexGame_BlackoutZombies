@@ -60,6 +60,7 @@ public class ObjectHealth : MonoBehaviour
         Health = MaxObjectHealth;
         _platerSpriteRenderer.color = DeafaultPlayerSpriteColor;
         _playerCollider.isTrigger = true;
+        EventManager.InvokeTransferHeart(Health);
     }
 
     private void OnEnable()

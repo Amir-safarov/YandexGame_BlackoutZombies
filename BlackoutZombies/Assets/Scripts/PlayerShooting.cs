@@ -25,11 +25,11 @@ public class PlayerShooting : MonoBehaviour
 
     private void Awake()
     {
-        EventManager.RestartSceneEvent.AddListener(DeafaultBulletsCount);
+        EventManager.RestartSceneEvent.AddListener(ReloadGun);
     }
 
 
-    public void ReloadGun()
+    public void ReloadGun(bool isRevive = false)
     {
         _bulletsCount = _bulletsForThisGun;
         EventManager.InvokeTransferBullets(_bulletsCount);
@@ -49,7 +49,7 @@ public class PlayerShooting : MonoBehaviour
         TestReload();
     }
 
-    private void DeafaultBulletsCount(bool isRevive = false)
+    private void DeafaultBulletsCount()
     {
         _bulletsForThisGun = _bulletsCount;
     }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameRoot : MonoBehaviour
@@ -26,6 +27,11 @@ public class GameRoot : MonoBehaviour
     {
         if (_playerShooting == null)
             _playerShooting = GameObject.FindGameObjectWithTag(PlayerTag).GetComponent<PlayerShooting>();
+    }
+
+    public bool GetPlayerControllState()
+    {
+        return _canPlayerControll;
     }
 
     public void OpenPlayerControll(bool isReviev = false) =>

@@ -7947,7 +7947,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1679267267}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -22719,6 +22719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _restartController: {fileID: 888814505}
+  _gameRoot: {fileID: 0}
 --- !u!1 &1972467971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9025365582677639473, guid: 97b338e42ba88f84586839880c355425, type: 3}

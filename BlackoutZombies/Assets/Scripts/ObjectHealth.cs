@@ -54,14 +54,6 @@ public class ObjectHealth : MonoBehaviour
         EventManager.RestartSceneEvent.AddListener(SetDeafaultState);
     }
 
-    private void SetDeafaultState(bool isReviev)
-    {
-        _platerSpriteRenderer.sprite = _defaultSprite;
-        Health = MaxObjectHealth;
-        _platerSpriteRenderer.color = DeafaultPlayerSpriteColor;
-        _playerCollider.isTrigger = true;
-        EventManager.InvokeTransferHeart(Health);
-    }
 
     private void OnEnable()
     {
@@ -89,6 +81,15 @@ public class ObjectHealth : MonoBehaviour
     {
         Health -= outDamage;
         print($"{name} taked damage {outDamage}.\n Health {Health}");
+    }
+
+    private void SetDeafaultState(bool isReviev)
+    {
+        _platerSpriteRenderer.sprite = _defaultSprite;
+        Health = MaxObjectHealth;
+        _platerSpriteRenderer.color = DeafaultPlayerSpriteColor;
+        _playerCollider.isTrigger = true;
+        EventManager.InvokeTransferHeart(Health);
     }
 
     private void CheckDamageObjectHit(Collider2D collision)
@@ -132,6 +133,7 @@ public class ObjectHealth : MonoBehaviour
         {
             _platerSpriteRenderer.color = DeafaultPlayerSpriteColor;
             _platerSpriteRenderer.sprite = _deadSprite;
+            _playerCollider.isTrigger = false;
             EventManager.InvokePlayersDeath();
         }
         else

@@ -1,13 +1,22 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class ReviveInvoke : MonoBehaviour
 {
     [SerializeField] private InputKeyboardUI _inputKeyboard;
-    public void RevivePlayer()
+
+    private void OnEnable() => YandexGame.RewardVideoEvent += RevivePlayer;
+
+    private void OnDisable() => YandexGame.RewardVideoEvent -= RevivePlayer;
+
+    private void RevivePlayer(int id)
     {
         _inputKeyboard.RestartScene(true);
+    }
+
+    public void OpenRewardAd(int id)
+    {
+        YandexGame.RewVideoShow(id);
+        print("Click");
     }
 }

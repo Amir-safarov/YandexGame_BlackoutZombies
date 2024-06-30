@@ -40,11 +40,15 @@ public class DeadZombiesCounter : MonoBehaviour
         if (!PlayerPrefs.HasKey(TotalDeadZombiesCount))
             PlayerPrefs.SetInt(TotalDeadZombiesCount, 0);
         _totalDeadZombiesPP = PlayerPrefs.GetInt(TotalDeadZombiesCount);
-        print($"Лучший счет по убийствам на начало: {_totalDeadZombiesPP}");
-        EventManager.TransferZombieDeathEvent.AddListener(RegistartionNewZombie);
         if (!YandexGame.SDKEnabled)
             return;
         _totalDeadZombiesYG = YandexGame.savesData.totalDeadZombiesCount;
+        float bestScore = Mathf.Max(_totalDeadZombiesYG, _totalDeadZombiesPP);
+
+        _totalDeadZombiesPP = bestScore;
+        _totalDeadZombiesYG = bestScore;
+        EventManager.TransferZombieDeathEvent.AddListener(RegistartionNewZombie);
+        print($"Лучший счет по убийствам на начало: {_totalDeadZombiesPP} \n и YG {_totalDeadZombiesYG}");
     }
 
     public float GetCurrentDeadZombiesCount()
@@ -54,7 +58,7 @@ public class DeadZombiesCounter : MonoBehaviour
 
     public float GetTotalDeadZombiesCount()
     {
-        return _totalDeadZombiesPP;
+        return _totalDeadZombiesYG;
     }
 
     private void RegistartionNewZombie()

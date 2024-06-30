@@ -52,7 +52,6 @@ public class RequarementToUse : MonoBehaviour
         {
             RequarementToUseObject childObj = transform.GetChild(i).GetComponent<RequarementToUseObject>();
             _listOfRequirementText.Add(childObj);
-            print($"Добавлен {childObj}");
         }
     }
 

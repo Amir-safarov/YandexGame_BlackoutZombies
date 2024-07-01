@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UIShowScores : MonoBehaviour
 {
@@ -55,5 +54,6 @@ public class UIShowScores : MonoBehaviour
                     _score.GetBestScoreScore().ToString();
                 break;
         }
+        print($"{_requiredText} {_scoreTextTMP.text}");
     }
 }

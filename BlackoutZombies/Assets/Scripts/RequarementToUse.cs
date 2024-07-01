@@ -31,7 +31,7 @@ public class RequarementToUse : MonoBehaviour
         CloseList();
         ObjectOn(requirementTextToSelectedGun.gameObject);
         ObjectOff(_startBTN);
-        int totalDeathZombies = (int)_zombiesCounter.GetTotalDeadZombiesCount();
+        int totalDeathZombies = _zombiesCounter.GetTotalDeadZombiesCount();
         if (totalDeathZombies >= requirementTextToSelectedGun.GetRequirementDeadZombiesCount())
         {
             ObjectOn(_startBTN);

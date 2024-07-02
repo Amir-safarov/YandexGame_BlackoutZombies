@@ -76,8 +76,8 @@ public class ZombiesSpawner : MonoBehaviour
     private void SpawnZombies(ZombieMovement _zombie)
     {
         _zombie.transform.position = GetSpawnPoint();
-        _zombie.OpenZombieMove();
         _zombie.gameObject.SetActive(true);
+        _zombie.OpenZombieMove();
     }
 
     private Vector3 GetSpawnPoint()

@@ -46,9 +46,8 @@ public class DeadZombiesCounter : MonoBehaviour
         if (!PlayerPrefs.HasKey(TotalDeadZombiesCount))
             PlayerPrefs.SetInt(TotalDeadZombiesCount, 0);
         _totalDeadZombiesPP = PlayerPrefs.GetInt(TotalDeadZombiesCount);
-        if (!YandexGame.SDKEnabled)
-            return;
-        _totalDeadZombiesYG = YandexGame.savesData.totalDeadZombiesCount;
+        if (YandexGame.SDKEnabled && YandexGame.auth)
+            _totalDeadZombiesYG = YandexGame.savesData.totalDeadZombiesCount;
         int bestScore = Mathf.Max(_totalDeadZombiesYG, _totalDeadZombiesPP);
 
         _totalDeadZombiesPP = bestScore;
@@ -64,7 +63,7 @@ public class DeadZombiesCounter : MonoBehaviour
 
     public int GetTotalDeadZombiesCount()
     {
-        return _totalDeadZombiesYG;
+        return _totalDeadZombiesPP;
     }
 
     private void RegistartionNewZombie()
@@ -93,7 +92,8 @@ public class DeadZombiesCounter : MonoBehaviour
             _totalDeadZombiesPP = PlayerPrefs.GetInt(TotalDeadZombiesCount);
             PlayerPrefs.Save();
             _totalDeadZombiesYG = _totalDeadZombiesPP;
-            YandexGame.savesData.score = _totalDeadZombiesYG;
+            if (YandexGame.SDKEnabled && YandexGame.auth)
+                YandexGame.savesData.totalDeadZombiesCount = _totalDeadZombiesYG;
             YandexGame.SaveProgress();
             print($"Новый лучший счет по убийствам: {_totalDeadZombiesPP}");
         }
@@ -101,7 +101,7 @@ public class DeadZombiesCounter : MonoBehaviour
 
     private void ResetTotalZombiesCount()
     {
-        PlayerPrefs.SetInt(TotalDeadZombiesCount,0);
+        PlayerPrefs.SetInt(TotalDeadZombiesCount, 0);
         _totalDeadZombiesPP = PlayerPrefs.GetInt(TotalDeadZombiesCount);
         _totalDeadZombiesYG = _totalDeadZombiesPP;
         YandexGame.savesData.score = _totalDeadZombiesYG;

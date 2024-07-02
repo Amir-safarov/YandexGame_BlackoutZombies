@@ -26,7 +26,7 @@ public class ScoreCounter : MonoBehaviour
     }
 
     private void OnDisable()
-    { 
+    {
         YandexGame.GetDataEvent -=
             InitialScoreVerification;
     }
@@ -38,15 +38,14 @@ public class ScoreCounter : MonoBehaviour
         _bestScorePP = PlayerPrefs.GetInt(BestScore);
 
 
-        if (!YandexGame.SDKEnabled)
-            return;
+        if (YandexGame.SDKEnabled && YandexGame.auth)
         _bestScoreYG = YandexGame.savesData.score;
 
         int bestScore = Mathf.Max(_bestScoreYG, _bestScorePP);
 
         _bestScoreYG = bestScore;
         _bestScorePP = bestScore;
-        
+
         EventManager.TransferScoreEvent.AddListener(RegistartionScore);
         print($"Лучший счет на начало: {_bestScorePP} \n и YG {_bestScoreYG}");
     }
@@ -64,7 +63,7 @@ public class ScoreCounter : MonoBehaviour
 
     public int GetBestScoreScore()
     {
-        return _bestScoreYG;
+        return _bestScorePP;
     }
 
     private void ResetBestScore()
@@ -85,7 +84,7 @@ public class ScoreCounter : MonoBehaviour
             _currentScore += FirstValueScoreState;
         else if (ScoringStates.SecondState == scoringStates)
             _currentScore += SecondValueScoreState;
-        else if (ScoringStates.FirstState == scoringStates)
+        else if (ScoringStates.ThirdState == scoringStates)
             _currentScore += ThirdValueScoreState;
         CheckBestScore();
     }
@@ -98,8 +97,10 @@ public class ScoreCounter : MonoBehaviour
             _bestScorePP = PlayerPrefs.GetInt(BestScore);
             PlayerPrefs.Save();
             _bestScoreYG = _bestScorePP;
-            YandexGame.savesData.score = _bestScoreYG;
-            YandexGame.NewLeaderboardScores("Название таблицы", _bestScoreYG);
+            if (YandexGame.SDKEnabled && YandexGame.auth)
+
+                YandexGame.savesData.score = _bestScoreYG;
+            YandexGame.NewLeaderboardScores("BestScoreLB", _bestScoreYG);
             print($"Лучший обновлен на : {_bestScorePP}");
         }
     }

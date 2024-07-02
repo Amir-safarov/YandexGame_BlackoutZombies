@@ -3,7 +3,6 @@ using UnityEngine;
 public class RestartAfterPlayerDeath : MonoBehaviour
 {
     [SerializeField] private UIVisibilityController _restartController;
-    [SerializeField] private GameRoot _gameRoot;
 
     private void Awake()
     {

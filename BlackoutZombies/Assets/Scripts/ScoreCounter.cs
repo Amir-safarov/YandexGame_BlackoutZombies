@@ -6,7 +6,7 @@ public class ScoreCounter : MonoBehaviour
 {
     private const string BestScore = "BestScore";
     private const int FirstValueScoreState = 100;
-    private const int SecondValueScoreState = 150;
+    private const int SecondValueScoreState = 200;
     private const int ThirdValueScoreState = 300;
 
     private int _bestScorePP;
@@ -17,6 +17,7 @@ public class ScoreCounter : MonoBehaviour
     {
         InitialScoreVerification();
         EventManager.RestartSceneEvent.AddListener(ResetCurrentScore);
+        EventManager.TransferScoreEvent.AddListener(RegistartionScore);
     }
 
     private void OnEnable()
@@ -31,7 +32,7 @@ public class ScoreCounter : MonoBehaviour
             InitialScoreVerification;
     }
 
-    private void InitialScoreVerification()
+    public void InitialScoreVerification()
     {
         if (!PlayerPrefs.HasKey(BestScore))
             PlayerPrefs.SetInt(BestScore, 0);
@@ -46,8 +47,7 @@ public class ScoreCounter : MonoBehaviour
         _bestScoreYG = bestScore;
         _bestScorePP = bestScore;
 
-        EventManager.TransferScoreEvent.AddListener(RegistartionScore);
-        print($"Лучший счет на начало: {_bestScorePP} \n и YG {_bestScoreYG}");
+        //print($"Лучший счет на начало: {_bestScorePP} \n и YG {_bestScoreYG}");
     }
 
     private void Update()

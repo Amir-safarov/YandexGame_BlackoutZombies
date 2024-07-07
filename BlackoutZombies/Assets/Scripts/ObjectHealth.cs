@@ -80,7 +80,8 @@ public class ObjectHealth : MonoBehaviour
     public void TakeDamage(int outDamage)
     {
         Health -= outDamage;
-        print($"{name} taked damage {outDamage}.\n Health {Health}");
+        if (gameObject.tag == "Zombie")
+            print($"{gameObject.name} taked damage {outDamage} \nHealth {Health}");
     }
 
     private void SetDeafaultState(bool isReviev)

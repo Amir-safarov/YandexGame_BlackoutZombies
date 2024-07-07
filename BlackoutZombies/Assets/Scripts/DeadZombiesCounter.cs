@@ -41,7 +41,7 @@ public class DeadZombiesCounter : MonoBehaviour
            InitialScoreVerification;
     }
 
-    private void InitialScoreVerification()
+    public void InitialScoreVerification()
     {
         if (!PlayerPrefs.HasKey(TotalDeadZombiesCount))
             PlayerPrefs.SetInt(TotalDeadZombiesCount, 0);
@@ -69,7 +69,7 @@ public class DeadZombiesCounter : MonoBehaviour
     private void RegistartionNewZombie()
     {
         _currentDeadZombies += 1;
-        print($"׃בטעמ סויקאס חמלבט: {_currentDeadZombies}");
+        //print($"׃בטעמ סויקאס חמלבט: {_currentDeadZombies}");
         TransferScoringState();
         CheckDeadZombiesCount();
     }

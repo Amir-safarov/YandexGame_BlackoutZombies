@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -46,28 +47,31 @@ public class ZombiesSpawner : MonoBehaviour
     {
         foreach (var zombie in _zombiesList)
             zombie.CloseZombieMove();
-        StopAllCoroutines();
     }
 
-    public void StartZombiesSpawn(bool isRevive = false) =>
+    public void StartZombiesSpawn(bool isRevive = false)
+    {
+        StopCoroutine(FirstWaveSpawn());
         StartCoroutine(FirstWaveSpawn());
+    }
 
     private void DisableZombies(bool isRevive)
     {
         foreach (var zombie in _zombiesList)
             zombie.gameObject.SetActive(false);
+        ZombieSpawnCounter = 0;
     }
 
     private IEnumerator FirstWaveSpawn()
     {
-        while (true)
+        for (ZombieSpawnCounter = 0; ZombieSpawnCounter < _zombiesList.Count; ZombieSpawnCounter++)
         {
+
             if (_zombiesList[ZombieSpawnCounter].gameObject.activeSelf)
-                continue;
+                yield return null;
             else
             {
                 SpawnZombies(_zombiesList[ZombieSpawnCounter]);
-                ZombieSpawnCounter++;
                 yield return new WaitForSeconds(_spawnInterval);
             }
         }

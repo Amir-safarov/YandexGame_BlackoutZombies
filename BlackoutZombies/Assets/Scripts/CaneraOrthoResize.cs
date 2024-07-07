@@ -6,7 +6,7 @@ public class CaneraOrthoResize : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera _cam;
 
     private const float DeathCamSize = 10;
-    private const float DeafaultCamSize = 5.3f;
+    private const float DeafaultCamSize = 6.1f;
 
     private void Awake()
     {

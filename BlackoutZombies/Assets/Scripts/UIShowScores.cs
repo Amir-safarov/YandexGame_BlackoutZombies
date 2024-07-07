@@ -54,6 +54,5 @@ public class UIShowScores : MonoBehaviour
                     _score.GetBestScoreScore().ToString();
                 break;
         }
-        print($"{_requiredText} {_scoreTextTMP.text}");
     }
 }

@@ -62,16 +62,13 @@ public class PlayerShooting : MonoBehaviour
                 for (int i = 0; i < 3; i++)
                     Instantiate(_bullet, _firePoint.position, Quaternion.Euler(_firePoint.rotation.eulerAngles.x,
                         _firePoint.rotation.eulerAngles.y, _firePoint.rotation.eulerAngles.z + angleOffsets[i % angleOffsets.Length]));
-                print("Shotgun shoot");
                 break;
             case ShottingType.USI:
                 Instantiate(_bullet, _firePoint.position, Quaternion.Euler(_firePoint.rotation.eulerAngles.x,
                     _firePoint.rotation.eulerAngles.y, _firePoint.rotation.eulerAngles.z + Random.Range(-9f, 9f)));
-                print("USI shoot");
                 break;
             default:
                 Instantiate(_bullet, _firePoint.position, _firePoint.rotation);
-                print("Pistol or Gun shoot");
                 break;
         }
     }
@@ -81,7 +78,6 @@ public class PlayerShooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             _bulletsCount = _bulletsForThisGun;
-            print($"Reload");
         }
     }
 }

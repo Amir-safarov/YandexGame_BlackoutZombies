@@ -5,6 +5,7 @@ using static DeadZombiesCounter;
 public class ScoreCounter : MonoBehaviour
 {
     private const string BestScore = "BestScore";
+
     private const int FirstValueScoreState = 100;
     private const int SecondValueScoreState = 200;
     private const int ThirdValueScoreState = 300;

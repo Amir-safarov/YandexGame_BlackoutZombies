@@ -15,7 +15,7 @@ public class PlayerShooting : MonoBehaviour
     private int _bulletsForThisGun;
 
     private const int LMB = 0;
-    private float[] angleOffsets = new float[] { 8f, 0f, -8f };
+    private readonly float[] angleOffsets = new float[] { 8f, 0f, -8f };
 
     private void OnEnable()
     {

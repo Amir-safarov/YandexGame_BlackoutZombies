@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameRoot : MonoBehaviour
@@ -7,6 +6,7 @@ public class GameRoot : MonoBehaviour
     [SerializeField] private PlayerMovement _playerMove;
 
     private bool _canPlayerControll;
+
     private const string PlayerTag = "Player";
 
     private void Awake()

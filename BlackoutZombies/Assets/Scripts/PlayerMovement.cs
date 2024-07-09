@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour, IMovable
 
     private const string Horizontal = "Horizontal";
     private const string Vertical = "Vertical";
+
     private readonly Vector3 DeafaultPosition = Vector3.zero;
 
     private void Awake()

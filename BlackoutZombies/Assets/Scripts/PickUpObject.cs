@@ -13,6 +13,7 @@ public class PickUpObject : MonoBehaviour
     [SerializeField] private PickUpObjectType _type;
 
     private const int HealthKitHPUp = 1;
+    private const string Player = "Player";
 
     private void OnEnable()
     {
@@ -21,7 +22,7 @@ public class PickUpObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag(Player))
         {
             switch (_type){
                 case PickUpObjectType.HealthKit:

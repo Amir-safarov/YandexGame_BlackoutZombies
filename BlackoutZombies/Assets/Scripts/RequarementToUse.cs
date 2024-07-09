@@ -10,8 +10,7 @@ public class RequarementToUse : MonoBehaviour
 
     private void Awake()
     {
-        EventManager.TransferTotalDeadZombieCountEvent.AddListener(CheckEqupAbility);
-        
+        EventManager.TransferTotalDeadZombieCountEvent.AddListener(CheckEqupAbility);    
     }
 
     private void OnEnable()

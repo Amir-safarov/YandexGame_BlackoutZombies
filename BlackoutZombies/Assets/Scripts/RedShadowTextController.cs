@@ -11,7 +11,6 @@ public class RedShadowTextController : MonoBehaviour
 
     private const int MaxFontSize = 118;
 
-
     private void OnValidate()
     {
         if (_boldText == null)

@@ -17,6 +17,5 @@ public class ReviveInvoke : MonoBehaviour
     public void OpenRewardAd(int id)
     {
         YandexGame.RewVideoShow(id);
-        print("Click");
     }
 }

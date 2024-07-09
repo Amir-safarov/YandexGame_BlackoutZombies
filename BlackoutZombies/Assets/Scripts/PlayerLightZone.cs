@@ -16,6 +16,7 @@ public class PlayerLightZone : MonoBehaviour
         set { _currentLightRange = value; }
 
     }
+
     [SerializeField] private Light _playerLightSource;
 
     private float _currentLightRange;

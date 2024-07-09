@@ -21,8 +21,14 @@ public class DeadZombiesCounter : MonoBehaviour
     {
         InitialScoreVerification();
         EventManager.RestartSceneEvent.AddListener(ResetCurrentDeadZombies);
+        EventManager.TransferZombieDeathEvent.AddListener(RegistartionNewZombie);
     }
 
+    private void Start()
+    {
+        if (YandexGame.SDKEnabled)
+            InitialScoreVerification();
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Insert))
@@ -33,11 +39,12 @@ public class DeadZombiesCounter : MonoBehaviour
     {
         YandexGame.GetDataEvent +=
            InitialScoreVerification;
+        InitialScoreVerification();
     }
 
     private void OnDisable()
     {
-        YandexGame.GetDataEvent +=
+        YandexGame.GetDataEvent -=
            InitialScoreVerification;
     }
 
@@ -46,13 +53,11 @@ public class DeadZombiesCounter : MonoBehaviour
         if (!PlayerPrefs.HasKey(TotalDeadZombiesCount))
             PlayerPrefs.SetInt(TotalDeadZombiesCount, 0);
         _totalDeadZombiesPP = PlayerPrefs.GetInt(TotalDeadZombiesCount);
-        if (YandexGame.SDKEnabled && YandexGame.auth)
-            _totalDeadZombiesYG = YandexGame.savesData.totalDeadZombiesCount;
+        _totalDeadZombiesYG = YandexGame.savesData.totalDeadZombiesCount;
         int bestScore = Mathf.Max(_totalDeadZombiesYG, _totalDeadZombiesPP);
 
         _totalDeadZombiesPP = bestScore;
         _totalDeadZombiesYG = bestScore;
-        EventManager.TransferZombieDeathEvent.AddListener(RegistartionNewZombie);
         print($"Лучший счет по убийствам на начало: {_totalDeadZombiesPP} \n и YG {_totalDeadZombiesYG}");
     }
 
@@ -113,5 +118,6 @@ public class DeadZombiesCounter : MonoBehaviour
         if (isReviev)
             return;
         _currentDeadZombies = 0;
+        YandexGame.FullscreenShow();
     }
 }

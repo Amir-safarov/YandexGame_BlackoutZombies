@@ -16,8 +16,6 @@ public class BulletHit : MonoBehaviour
                 collisionObject.TakeDamage(BulletDamage);
                 EventManager.InvokeTransferZombieDeath();
             }
-            else
-                print("sdhfbhsdbfhbsdhbhsdbfhkbsdkajbfkhjbfkahbfksabflayifbsadlifybsdliyfbaslfiy");
         }
     }
 }

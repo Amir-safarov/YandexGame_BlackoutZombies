@@ -11,6 +11,7 @@ public class UIVisibilityController : MonoBehaviour
     public void ObjectOff() =>
         ChangeObjectsVisibility(false);
 
+
     private void ChangeObjectsVisibility(bool _objectsEnable)
     {
         foreach (GameObject gameObject in _gameObjectCollection)

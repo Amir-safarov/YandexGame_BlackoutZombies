@@ -16,7 +16,7 @@ public class CheckAuthState : MonoBehaviour
         CheckAuth();
     }
 
-    private void CheckAuth()
+    public void CheckAuth()
     {
         if (YandexGame.auth)
         {

@@ -20,10 +20,17 @@ public class ScoreCounter : MonoBehaviour
         EventManager.TransferScoreEvent.AddListener(RegistartionScore);
     }
 
+    private void Start()
+    {
+        if (YandexGame.SDKEnabled)
+            InitialScoreVerification();
+    }
+
     private void OnEnable()
     {
         YandexGame.GetDataEvent +=
             InitialScoreVerification;
+        InitialScoreVerification();
     }
 
     private void OnDisable()
@@ -39,7 +46,6 @@ public class ScoreCounter : MonoBehaviour
         _bestScorePP = PlayerPrefs.GetInt(BestScore);
 
 
-        if (YandexGame.SDKEnabled && YandexGame.auth)
         _bestScoreYG = YandexGame.savesData.score;
 
         int bestScore = Mathf.Max(_bestScoreYG, _bestScorePP);
@@ -47,7 +53,7 @@ public class ScoreCounter : MonoBehaviour
         _bestScoreYG = bestScore;
         _bestScorePP = bestScore;
 
-        //print($"Лучший счет на начало: {_bestScorePP} \n и YG {_bestScoreYG}");
+        print($"Лучший счет на начало: {_bestScorePP} \n и YG {_bestScoreYG}");
     }
 
     private void Update()

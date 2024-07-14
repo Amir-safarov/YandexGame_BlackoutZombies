@@ -6092,8 +6092,8 @@ RectTransform:
   - {fileID: 1161343211}
   m_Father: {fileID: 1679267267}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.4, y: 0.328}
-  m_AnchorMax: {x: 0.6, y: 0.424}
+  m_AnchorMin: {x: 0.4, y: 0.33892596}
+  m_AnchorMax: {x: 0.6, y: 0.43540746}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7757,7 +7757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.54300004
+      value: 0.6375926
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_AnchorMin.x
@@ -7765,15 +7765,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.44900003
+      value: 0.5435926
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -3.3087769
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7805,7 +7805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -11477,7 +11477,18 @@ PrefabInstance:
       value: "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u043E\u0432\u0430\u0432\u0448\u0438\u0441\u044C
         \u0432\u0430\u0448 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441 \u0431\u0443\u0434\u0435\u0442
         \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C\u0441\u044F \u043C\u0435\u0436\u0434\u0443
-        \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438"
+        \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438.
+        \u0414\u043B\u044F \u044D\u0442\u043E\u0433\u043E \u043D\u0430\u0436\u043C\u0438\u0442\u0435
+        \u043D\u0430 \u043D\u0430\u0434\u043F\u0438\u0441\u044C \"\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F\"."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626902712847955227, guid: 3ecdeb3f2eec1bc469c2b8a81b891d43, type: 3}
+      propertyPath: m_Text
+      value: "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u043E\u0432\u0430\u0432\u0448\u0438\u0441\u044C
+        \u0432\u0430\u0448 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441 \u0431\u0443\u0434\u0435\u0442
+        \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C\u0441\u044F \u043C\u0435\u0436\u0434\u0443
+        \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438.
+        \u0414\u043B\u044F \u044D\u0442\u043E\u0433\u043E \u043D\u0430\u0436\u043C\u0438\u0442\u0435
+        \u043D\u0430 \u043D\u0430\u0434\u043F\u0438\u0441\u044C \"\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F\"."
       objectReference: {fileID: 0}
     - target: {fileID: 6939715256116674790, guid: 3ecdeb3f2eec1bc469c2b8a81b891d43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -11497,14 +11508,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7263094388183550048, guid: 3ecdeb3f2eec1bc469c2b8a81b891d43, type: 3}
       propertyPath: en
-      value: Once logged in, your progress will be saved between devices
+      value: 'Once logged in, your progress will be saved between devices. '
       objectReference: {fileID: 0}
     - target: {fileID: 7263094388183550048, guid: 3ecdeb3f2eec1bc469c2b8a81b891d43, type: 3}
       propertyPath: ru
       value: "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u043E\u0432\u0430\u0432\u0448\u0438\u0441\u044C
         \u0432\u0430\u0448 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441 \u0431\u0443\u0434\u0435\u0442
         \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C\u0441\u044F \u043C\u0435\u0436\u0434\u0443
-        \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438"
+        \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438.
+        \u0414\u043B\u044F \u044D\u0442\u043E\u0433\u043E \u043D\u0430\u0436\u043C\u0438\u0442\u0435
+        \u043D\u0430 \u043D\u0430\u0434\u043F\u0438\u0441\u044C \"\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F\"."
       objectReference: {fileID: 0}
     - target: {fileID: 7263094388183550048, guid: 3ecdeb3f2eec1bc469c2b8a81b891d43, type: 3}
       propertyPath: tr
@@ -11515,7 +11528,9 @@ PrefabInstance:
       value: "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u043E\u0432\u0430\u0432\u0448\u0438\u0441\u044C
         \u0432\u0430\u0448 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441 \u0431\u0443\u0434\u0435\u0442
         \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C\u0441\u044F \u043C\u0435\u0436\u0434\u0443
-        \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438"
+        \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438.
+        \u0414\u043B\u044F \u044D\u0442\u043E\u0433\u043E \u043D\u0430\u0436\u043C\u0438\u0442\u0435
+        \u043D\u0430 \u043D\u0430\u0434\u043F\u0438\u0441\u044C \"\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F\"."
       objectReference: {fileID: 0}
     - target: {fileID: 7263094388183550048, guid: 3ecdeb3f2eec1bc469c2b8a81b891d43, type: 3}
       propertyPath: countLang
@@ -11531,14 +11546,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7300799557818688042, guid: 3ecdeb3f2eec1bc469c2b8a81b891d43, type: 3}
       propertyPath: en
-      value: Once logged in, your progress will be saved between devices
+      value: 'Once logged in, your progress will be saved between devices. '
       objectReference: {fileID: 0}
     - target: {fileID: 7300799557818688042, guid: 3ecdeb3f2eec1bc469c2b8a81b891d43, type: 3}
       propertyPath: ru
       value: "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u043E\u0432\u0430\u0432\u0448\u0438\u0441\u044C
         \u0432\u0430\u0448 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441 \u0431\u0443\u0434\u0435\u0442
         \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C\u0441\u044F \u043C\u0435\u0436\u0434\u0443
-        \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438"
+        \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438.
+        \u0414\u043B\u044F \u044D\u0442\u043E\u0433\u043E \u043D\u0430\u0436\u043C\u0438\u0442\u0435
+        \u043D\u0430 \u043D\u0430\u0434\u043F\u0438\u0441\u044C \"\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F\"."
       objectReference: {fileID: 0}
     - target: {fileID: 7300799557818688042, guid: 3ecdeb3f2eec1bc469c2b8a81b891d43, type: 3}
       propertyPath: tr
@@ -11549,7 +11566,9 @@ PrefabInstance:
       value: "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u043E\u0432\u0430\u0432\u0448\u0438\u0441\u044C
         \u0432\u0430\u0448 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441 \u0431\u0443\u0434\u0435\u0442
         \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u0442\u044C\u0441\u044F \u043C\u0435\u0436\u0434\u0443
-        \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438 "
+        \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438.
+        \u0414\u043B\u044F \u044D\u0442\u043E\u0433\u043E \u043D\u0430\u0436\u043C\u0438\u0442\u0435
+        \u043D\u0430 \u043D\u0430\u0434\u043F\u0438\u0441\u044C \"\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F\"."
       objectReference: {fileID: 0}
     - target: {fileID: 7300799557818688042, guid: 3ecdeb3f2eec1bc469c2b8a81b891d43, type: 3}
       propertyPath: countLang
@@ -14262,11 +14281,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 458834898500449085, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: en
-      value: Destroy 75 zombies
+      value: Destroy 35 zombies
       objectReference: {fileID: 0}
     - target: {fileID: 458834898500449085, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: ru
-      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 75 \u0437\u043E\u043C\u0431\u0438"
+      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 35 \u0437\u043E\u043C\u0431\u0438"
       objectReference: {fileID: 0}
     - target: {fileID: 458834898500449085, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: countLang
@@ -14278,11 +14297,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 559586211579500919, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: en
-      value: Destroy 75 zombies
+      value: Destroy 35 zombies
       objectReference: {fileID: 0}
     - target: {fileID: 559586211579500919, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: ru
-      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 75 \u0437\u043E\u043C\u0431\u0438"
+      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 35 \u0437\u043E\u043C\u0431\u0438"
       objectReference: {fileID: 0}
     - target: {fileID: 559586211579500919, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: countLang
@@ -14302,7 +14321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3734034826211512503, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_Text
-      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 75 \u0437\u043E\u043C\u0431\u0438"
+      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 35 \u0437\u043E\u043C\u0431\u0438"
       objectReference: {fileID: 0}
     - target: {fileID: 3734034826211512503, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_FontData.m_BestFit
@@ -14310,7 +14329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4135103656819445318, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_Text
-      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 75 \u0437\u043E\u043C\u0431\u0438"
+      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 35 \u0437\u043E\u043C\u0431\u0438"
       objectReference: {fileID: 0}
     - target: {fileID: 4135103656819445318, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_FontData.m_BestFit
@@ -15376,23 +15395,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.34143475
+      value: 0.6672085
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.54300004
+      value: 0.54170376
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.008
+      value: 0.33181253
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.46011114
+      value: 0.45777786
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0.000030517578
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 7083913761893926457, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_SizeDelta.y
@@ -20221,7 +20240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007bee3a666120e409b37eab31cc61ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _requirementCount: 75
+  _requirementCount: 35
 --- !u!1 &1715504741
 GameObject:
   m_ObjectHideFlags: 0
@@ -23307,11 +23326,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 458834898500449085, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: en
-      value: Destroy 120 zombies
+      value: Destroy 50 zombies
       objectReference: {fileID: 0}
     - target: {fileID: 458834898500449085, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: ru
-      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 120 \u0437\u043E\u043C\u0431\u0438"
+      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 50 \u0437\u043E\u043C\u0431\u0438"
       objectReference: {fileID: 0}
     - target: {fileID: 458834898500449085, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: countLang
@@ -23323,11 +23342,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 559586211579500919, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: en
-      value: Destroy 120 zombies
+      value: Destroy 50 zombies
       objectReference: {fileID: 0}
     - target: {fileID: 559586211579500919, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: ru
-      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 120 \u0437\u043E\u043C\u0431\u0438"
+      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 50 \u0437\u043E\u043C\u0431\u0438"
       objectReference: {fileID: 0}
     - target: {fileID: 559586211579500919, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: countLang
@@ -23347,7 +23366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3734034826211512503, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_Text
-      value: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436 120 \u0437\u043E\u043C\u0431\u0438"
+      value: "\u0423\u0438\u0447\u0442\u043E\u0436 50 \u0437\u043E\u043C\u0431\u0438"
       objectReference: {fileID: 0}
     - target: {fileID: 3734034826211512503, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_FontData.m_BestFit
@@ -23359,7 +23378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4135103656819445318, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_Text
-      value: "\u0423\u0438\u0447\u0442\u043E\u0436 120 \u0437\u043E\u043C\u0431\u0438"
+      value: "\u0423\u0438\u0447\u0442\u043E\u0436 50 \u0437\u043E\u043C\u0431\u0438"
       objectReference: {fileID: 0}
     - target: {fileID: 4135103656819445318, guid: 97b338e42ba88f84586839880c355425, type: 3}
       propertyPath: m_FontData.m_BestFit
@@ -23482,7 +23501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007bee3a666120e409b37eab31cc61ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _requirementCount: 120
+  _requirementCount: 50
 --- !u!1 &1983156429
 GameObject:
   m_ObjectHideFlags: 0
@@ -25720,7 +25739,7 @@ PrefabInstance:
       objectReference: {fileID: 781480583}
     - target: {fileID: 3626565762336181895, guid: da5100619e8f50f4aaad6682681df293, type: 3}
       propertyPath: _spawnInterval
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3626565762336181895, guid: da5100619e8f50f4aaad6682681df293, type: 3}
       propertyPath: _zombiesOnScene

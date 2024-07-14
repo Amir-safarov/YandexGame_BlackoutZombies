@@ -46,7 +46,6 @@ public class PlayerShooting : MonoBehaviour
         }
         else
             _fireCooldown -= Time.deltaTime;
-        TestReload();
     }
 
     private void DeafaultBulletsCount()
@@ -70,14 +69,6 @@ public class PlayerShooting : MonoBehaviour
             default:
                 Instantiate(_bullet, _firePoint.position, _firePoint.rotation);
                 break;
-        }
-    }
-
-    private void TestReload()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            _bulletsCount = _bulletsForThisGun;
         }
     }
 }

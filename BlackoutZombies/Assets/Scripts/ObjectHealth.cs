@@ -35,12 +35,13 @@ public class ObjectHealth : MonoBehaviour
     private const int ZombiesDamage = 1;
     private const int DamageObjectDamage = 4;
     private const int MaxObjectHealth = 3;
-    private const float InvulnerabilityTime = 1.5f;
+    private const float InvulnerabilityTime = 2f;
 
     private readonly Color DeafaultPlayerSpriteColor = new Color(1f, 1f, 1f, 1f);
     private readonly Color PlayerInvulnerabilitySpriteColor = new Color(1f, 1f, 1f, 0.9f);
 
     private string _currentObjectTag;
+    private bool _isDead;
 
     private void OnValidate()
     {
@@ -53,7 +54,6 @@ public class ObjectHealth : MonoBehaviour
     {
         EventManager.RestartSceneEvent.AddListener(SetDeafaultState);
     }
-
 
     private void OnEnable()
     {
@@ -89,7 +89,8 @@ public class ObjectHealth : MonoBehaviour
         _platerSpriteRenderer.sprite = _defaultSprite;
         Health = MaxObjectHealth;
         _platerSpriteRenderer.color = DeafaultPlayerSpriteColor;
-        _playerCollider.isTrigger = true;
+        _playerCollider.enabled = true;
+        _isDead = false;
         EventManager.InvokeTransferHeart(Health);
     }
 
@@ -101,6 +102,7 @@ public class ObjectHealth : MonoBehaviour
             EventManager.InvokeTransferHeart(Health);
         }
     }
+
     private void CheckDamageObjectHit(Collision2D collision)
     {
         if (collision.collider.CompareTag(DamageObjectTag))
@@ -119,22 +121,25 @@ public class ObjectHealth : MonoBehaviour
             EventManager.InvokeTransferHeart(Health);
         }
     }
+
     private IEnumerator PlayerInvulnerability()
     {
         _platerSpriteRenderer.color = PlayerInvulnerabilitySpriteColor;
-        _playerCollider.isTrigger = false;
+        _playerCollider.enabled = false;
         yield return new WaitForSeconds(InvulnerabilityTime);
         _platerSpriteRenderer.color = DeafaultPlayerSpriteColor;
-        _playerCollider.isTrigger = true;
+        _playerCollider.enabled = true;
     }
 
     private void ObjectDeath()
     {
         if (_isPlayersHealth)
         {
+            if (_isDead)
+                return;
             _platerSpriteRenderer.color = DeafaultPlayerSpriteColor;
             _platerSpriteRenderer.sprite = _deadSprite;
-            _playerCollider.isTrigger = false;
+            _isDead = true;
             EventManager.InvokePlayersDeath();
         }
         else

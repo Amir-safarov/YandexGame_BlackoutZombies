@@ -11,7 +11,7 @@ public class ZombieMovement : MonoBehaviour, IMovable
     private const float _minMovementSpeed = 3.4f;
     private const float _maxMovementSpeed = 4.6f;
 
-
+  
     private void OnEnable()
     {
         _movementSpeed = Random.Range(_minMovementSpeed, _maxMovementSpeed);
